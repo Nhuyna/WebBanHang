@@ -14,6 +14,12 @@
 <body>
   <!-- ---------------HEADER---------- -->
   <header>
+    <div class="search-css" style="display: none;">
+      <div class="search-box">
+        <input type="text" placeholder="Tìm kiếm" />
+        <button><i class="ri-search-2-line"></i></button>
+      </div>
+    </div>
     <div class="container">
       <div class="row-flex">
         <div class="header-bar-icon"><i class="ri-menu-line"></i></div>
@@ -41,6 +47,7 @@
         </div>
       </div>
     </div>
+
   </header>
   <!-- ---------------SLIDER---------- -->
   <div class="body">
@@ -272,7 +279,7 @@
 <script src="./asset/js/product.js"></script>
 <script src="./asset/js/show-product.js"></script>
 <script class="showhotproduct">
-  show_product('hot', 'product-hot-js', 11);
+  show_product('hot', 'product-hot-js', './', 11);
   // addToCart();
 </script>
 

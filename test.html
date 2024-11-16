@@ -1,18 +1,102 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Ô Tìm Kiếm</title>
+    <style>
+        /* Căn chỉnh cho body */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        /* Định dạng ô tìm kiếm */
+        .search-box {
+            display: flex;
+            /* Căn chỉnh input và button theo hàng ngang */
+            align-items: center;
+            /* Căn chỉnh theo chiều dọc */
+            border-radius: 25px;
+            border: 1px solid #ccc;
+            padding: 5px 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Ô input */
+        .search-box input {
+            width: 250px;
+            /* Kích thước của input */
+            padding: 8px;
+            font-size: 16px;
+            border: none;
+            outline: none;
+            border-radius: 20px;
+            transition: border 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        /* Hiệu ứng khi ô input focus */
+        .search-box input:focus {
+            border: 1px solid #4CAF50;
+            /* Màu viền khi focus */
+            box-shadow: 0px 0px 5px rgba(76, 175, 80, 0.5);
+        }
+
+        /* Nút tìm kiếm */
+        .search-box button {
+            background-color: #4CAF50;
+            /* Màu nền nút */
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 8px 12px;
+            margin-left: 10px;
+            font-size: 18px;
+            color: white;
+            border-radius: 50%;
+            /* Tạo nút tròn */
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        /* Định dạng hình ảnh trong nút tìm kiếm */
+        .search-box button img {
+            width: 20px;
+            /* Kích thước hình ảnh */
+            height: 20px;
+            /* Kích thước hình ảnh */
+        }
+
+        /* Hiệu ứng khi hover nút tìm kiếm */
+        .search-box button:hover {
+            background-color: #45a049;
+            transform: scale(1.1);
+        }
+
+        /* Hiệu ứng khi nhấn nút */
+        .search-box button:active {
+            background-color: #388e3c;
+            transform: scale(1);
+        }
+    </style>
 </head>
 
 <body>
-    <div class="product-detail-right-quantity-input">
-        <i class="ri-subtract-fill"></i>
-        <input onkeydown="return false" class="quantity-input" type="number" value="1" />
-        <i class="ri-add-line"></i>
+
+    <!-- Ô tìm kiếm đơn giản -->
+    <div class="search-box">
+        <input type="text" placeholder="Tìm kiếm..." />
+        <button>
+            <!-- Hình ảnh thay vì biểu tượng Unicode -->
+            <img src="./asset/image/search_24dp_UNDEFINED_FILL0_wght400_GRAD0_opsz24.png" alt="Tìm kiếm">
+        </button>
     </div>
+
 </body>
 
 </html>

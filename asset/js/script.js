@@ -191,19 +191,22 @@ document.querySelector(".ri-shopping-cart-line").addEventListener("click", () =>
 })
 
 ///Chi tiết sản phẩm
-function dieu_huong(a, b) {
-  if (a == "ctsp") {
-    let pd;
-    product.forEach((value) => {
-      if (b == value.id) {
-        pd = value;
-      }
-    })
-    console.log(document.querySelector('script.showhotproduct'));
+function showProductDetail() {
+  console.log("hihi");
+  let url = new URL(window.location.href);
+  let id = url.searchParams.get('id');
+  console.log(id);
+  let pd;
+  product.forEach((value) => {
+    if (id == value.id) {
+      pd = value;
+    }
+  })
+  console.log(document.querySelector('script.showhotproduct'));
 
-    let output = document.querySelector('.body').innerHTML;
-    let valueoutput = "";
-    valueoutput += `    <section class="product-detail p-to-top">
+  let output = document.querySelector('.body').innerHTML;
+  let valueoutput = "";
+  valueoutput += `    <section class="product-detail p-to-top">
       <div class="container">
         <div class="row-flex row-flex-product-detail">
           <p>Sản phẩm</p>
@@ -213,14 +216,13 @@ function dieu_huong(a, b) {
         <div class="row-grid">
           <div class="product-detail-left">
             <img class="product-image-main"
-              src="${pd.img[0]}" alt="" />
+              src="./../${pd.img[0]}" alt="" />
             <div class="product-image-items">`;
-    pd.img.forEach((image) => {
-      console.log(image);
-      valueoutput += `<img src="${image}" alt="" />`;
-      // valueoutput = valueoutput + `< img class="" src = "${image}" alt = "" />`;
-    });
-    valueoutput += `
+  pd.img.forEach((image) => {
+    valueoutput += `<img src="./../${image}" alt="" />`;
+    // valueoutput = valueoutput + `< img class="" src = "${image}" alt = "" />`;
+  });
+  valueoutput += `
             </div >
           </div >
       <div class="product-detail-right" id="${pd.id}">
@@ -234,11 +236,11 @@ function dieu_huong(a, b) {
         <div class="product-detail-right-des">
           <h2>Đặc điểm nổi bật</h2>
           <ul>`
-    pd.introduce.forEach((intro) => {
-      valueoutput += `<li>${intro}</li>`;
-    })
+  pd.introduce.forEach((intro) => {
+    valueoutput += `<li>${intro}</li>`;
+  })
 
-    valueoutput += `
+  valueoutput += `
           </ul >
         </div >
         <div class="product-detail-right-quantity">
@@ -253,7 +255,7 @@ function dieu_huong(a, b) {
             <i class="ri-subtract-fill"></i>
             <input class="quantity-input" type="number" value="1" />
             <i class="ri-add-line"></i>
-         
+
         </div>
         <div class="product-detail-right-addcart">
           <button class="main-btn add-cart-js">Thêm vào giỏ hàng</button>
@@ -278,20 +280,34 @@ function dieu_huong(a, b) {
       </div>
       </div >
     </section > `;
-    console.log("điều hướng rồi");
-    document.querySelector('.body').innerHTML = valueoutput;
-    console.log(document.querySelector('.body'));
-    showimgpd();
-    //  document.querySelector(".product-image-items").firstElementChild;
-    // document.querySelector(".showhotproduct").firstChild.innerHTML;
-    // console.log(document.querySelector(".showhotproduct").firstChild.innerHTML);
-    window.scrollTo(0, 0);
-    clickproduct();
-    chonsize();
-    Themslsp();
-    GiamSLSP();
-    setcart();
-    addcart();
+  console.log("điều hướng rồi");
+  document.querySelector('.body').innerHTML = valueoutput;
+  console.log(document.querySelector('.body'));
+  showimgpd();
+  //  document.querySelector(".product-image-items").firstElementChild;
+  // document.querySelector(".showhotproduct").firstChild.innerHTML;
+  // console.log(document.querySelector(".showhotproduct").firstChild.innerHTML);
+  window.scrollTo(0, 0);
+  clickproduct();
+  chonsize();
+  Themslsp();
+  GiamSLSP();
+  setcart();
+  addcart();
+
+}
+function dieu_huong(a, b) {
+  //id sanpham
+  if (a == "ctsp") {
+    let url = new URL(window.location.href);
+    console.log("1");
+    if (url.pathname == '/WEB/Webct/index.html') {
+      location.href = `./user/ProductDetail.html?id=${b}`;
+    }
+    else {
+      console.log("sai");
+      location.href = `./ProductDetail.html?id=${b}`;
+    }
 
 
 
@@ -308,10 +324,21 @@ function clickproduct() {
       // document.querySelector('script.showhotproduct').innerHTML = document.querySelector('script.showhotproduct').innerHTML.replace('11', '3');
       let productId = this.closest('.hot-product-item').id;
       console.log(productId);
-      show_product('hot', 'product-hot-js', 3);
+      show_product('hot', 'product-hot-js', '../', 3);
       dieu_huong("ctsp", productId);
+      // history.replaceState(null, '', './ProductDetail.html?html');
     });
   })
 
 }
 clickproduct();
+clickSearch();
+//Tìm kiếm sản phẩm
+function clickSearch() {
+  document.querySelector(".header-search").addEventListener("click", function () {
+    this.style.display = "none"; // Ẩn thẻ bằng cách đặt display thành "none"
+    document.querySelector(".search-css").style.display = "";
+  });
+
+
+}

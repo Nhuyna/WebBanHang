@@ -1,6 +1,7 @@
-function show_product(type, name, sl) {
+function show_product(type, name, link, sl) {
     let i = 0;
     let output = document.querySelector(`.${name}`);
+    console.log(link + product[0].img[1]);
     let valueoutput = ` <div class="hot-product-container">`;
     product.forEach((value) => {
         if (i <= sl) {
@@ -14,7 +15,7 @@ function show_product(type, name, sl) {
                     valueoutput += `  <div class="hot-product-item row-grid product-detail-js" id="${value.id}">
                      <div>
                         <div class="hot-product-image" >
-                            <img src="${value.img[1]}" alt="" />
+                            <img src="${link + value.img[1]}" alt="" />
                         </div >
                         <div class="hot-product-info">
                             <h3>${value.title}</h3>
