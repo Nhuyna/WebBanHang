@@ -56,17 +56,3 @@ function show_product(type, name, sl) {
     // <span>add to cart</span>
 
 }
-function dieu_huong() {
-    location.replace("./user/ProductDetail.html");
-}
-function ShowProductDetail() {
-    document.querySelectorAll(".hot-product-image").forEach((value) => {
-        value.addEventListener('click', function () {
-            dieu_huong();
-        });
-    })
-}
-function addToCart() {
-    let value = document.querySelector(".quantity-input").value;
-    console.log(value);
-}

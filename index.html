@@ -40,32 +40,35 @@
     </div>
   </header>
   <!-- ---------------SLIDER---------- -->
-  <section class="slider">
-    <div class="slider-container">
-      <div class="slider-item">
-        <img src="asset/image/baner3.jpeg" alt="" />
+  <div class="body">
+    <section class="slider">
+      <div class="slider-container">
+        <div class="slider-item">
+          <img src="asset/image/baner3.jpeg" alt="" />
+        </div>
+        <div class="slider-item">
+          <img src="asset/image/baner1.jpg" alt="" />
+        </div>
+        <div class="slider-item">
+          <img src="asset/image/baner2.jpeg" alt="" />
+        </div>
       </div>
-      <div class="slider-item">
-        <img src="asset/image/baner1.jpg" alt="" />
+      <div class="slider-control">
+        <button class="prev"><i class="ri-arrow-left-s-line"></i></button>
+        <button class="next"><i class="ri-arrow-right-s-line"></i></button>
       </div>
-      <div class="slider-item">
-        <img src="asset/image/baner2.jpeg" alt="" />
-      </div>
-    </div>
-    <div class="slider-control">
-      <button class="prev"><i class="ri-arrow-left-s-line"></i></button>
-      <button class="next"><i class="ri-arrow-right-s-line"></i></button>
-    </div>
-  </section>
+    </section>
+  </div>
 
   <!-- ---------------HOT PRODUCT---------- -->
+
 
   <section class="hot-product">
     <div class="container">
       <div class="row-grid" style="margin-right: 5%;">
         <p class="heading-text">SẢN PHẨM HOT</p>
-        <div class=". product-hot-js">
-          <div class="hot-product-container">
+        <div class="product-hot-js">
+          <!-- <div class="hot-product-container">
             <div class="hot-product-item row-grid">
               <a href="./user/product.html">
                 <div class="hot-product-image">
@@ -229,7 +232,7 @@
               </a>
             </div>
 
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
@@ -265,9 +268,8 @@
 </body>
 <script src="./asset/js/product.js"></script>
 <script src="./asset/js/show-product.js"></script>
-<script>
+<script class="showhotproduct">
   show_product('hot', 'product-hot-js', 11);
-  ShowProductDetail();
   // addToCart();
 </script>
 

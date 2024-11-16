@@ -412,6 +412,7 @@ footer .row-grid {
 }
 /* -----------------PRODUCT-DETAIL------------- */
 .row-flex-product-detail {
+  display: flex;
   justify-content: flex-start;
   align-items: center;
   padding: 12px;
@@ -444,7 +445,7 @@ footer .row-grid {
 }
 .product-detail .row-grid {
   display: grid;
-  grid-template-columns: 60% 40%;
+  grid-template-columns: 1fr 1fr;
   column-gap: 20px;
 }
 .product-detail-left img {
@@ -456,6 +457,11 @@ footer .row-grid {
 }
 .product-detail-left {
   position: relative;
+}
+.product-image-main {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: contain;
 }
 .product-image-items img {
   width: 70px;
