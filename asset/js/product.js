@@ -38,13 +38,23 @@ product = [
 
 
 
-
         },
         img: [
             'asset/image/product/WEB1/AoThun/7/2484.ULSMV.TSZ705__0045_Layer-25_DEN.png',
             'asset/image/product/WEB1/AoThun/7/2484.ULSMV.TSZ705__CLASSICVENOM_1_DEN.png',
             'asset/image/product/WEB1/AoThun/7/2484.ULSMV.TSZ705__CLASSICVENOM-27_DEN_89.png',
             'asset/image/product/WEB1/AoThun/7/2484.ULSMV.TSZ705__CLASSICVENOM-28_DEN.png'
+        ],
+        introduce: [
+            'Chất liệu 100% Cotton',
+            'Định lượng vải 240gsm mềm mại thấm hút mồ hôi',
+            'Bo cổ dày dặn, vải không xù sau nhiều lần giặt, giữ form tốt hơn',
+            'Đường may 3 kim tỉ mỉ, hoàn thiện tốt',
+            'Hình in chuyển nhiệt sắc nét',
+            'Dáng Relaxed Fit, vừa vặn đứng form, Unisex',
+            'Mẫu nam: 1m81-70kg, mặc áo size L',
+            'Tự hào sản xuất tại Việt Nam'
+
         ],
         price: 390000
     }
@@ -96,6 +106,17 @@ product = [
             'asset/image/product/WEB1/AoThun/7/2484.ULSMV.TSZ705__CLASSICVENOM-27_DEN_89.png',
             'asset/image/product/WEB1/AoThun/7/2484.ULSMV.TSZ705__CLASSICVENOM-28_DEN.png'
         ],
+        introduce: [
+            'Chất liệu 100% Cotton',
+            'Định lượng vải 240gsm mềm mại thấm hút mồ hôi',
+            'Bo cổ dày dặn, vải không xù sau nhiều lần giặt, giữ form tốt hơn',
+            'Đường may 3 kim tỉ mỉ, hoàn thiện tốt',
+            'Hình in chuyển nhiệt sắc nét',
+            'Dáng Relaxed Fit, vừa vặn đứng form, Unisex',
+            'Mẫu nam: 1m81-70kg, mặc áo size L',
+            'Tự hào sản xuất tại Việt Nam'
+
+        ],
         price: 390000
     },
     {
@@ -145,6 +166,17 @@ product = [
             'asset/image/product/WEB1/AoThun/7/2484.ULSMV.TSZ705__CLASSICVENOM-27_DEN_89.png',
             'asset/image/product/WEB1/AoThun/7/2484.ULSMV.TSZ705__CLASSICVENOM-28_DEN.png'
         ],
+        introduce: [
+            'Chất liệu 100% Cotton',
+            'Định lượng vải 240gsm mềm mại thấm hút mồ hôi',
+            'Bo cổ dày dặn, vải không xù sau nhiều lần giặt, giữ form tốt hơn',
+            'Đường may 3 kim tỉ mỉ, hoàn thiện tốt',
+            'Hình in chuyển nhiệt sắc nét',
+            'Dáng Relaxed Fit, vừa vặn đứng form, Unisex',
+            'Mẫu nam: 1m81-70kg, mặc áo size L',
+            'Tự hào sản xuất tại Việt Nam'
+
+        ],
         price: 390000
     },
     {
@@ -182,6 +214,17 @@ product = [
             'asset/image/product/WEB1/AoThun/7/2484.ULSMV.TSZ705__CLASSICVENOM_1_DEN.png',
             'asset/image/product/WEB1/AoThun/7/2484.ULSMV.TSZ705__CLASSICVENOM-27_DEN_89.png',
             'asset/image/product/WEB1/AoThun/7/2484.ULSMV.TSZ705__CLASSICVENOM-28_DEN.png'
+        ],
+        introduce: [
+            'Chất liệu 100% Cotton',
+            'Định lượng vải 240gsm mềm mại thấm hút mồ hôi',
+            'Bo cổ dày dặn, vải không xù sau nhiều lần giặt, giữ form tốt hơn',
+            'Đường may 3 kim tỉ mỉ, hoàn thiện tốt',
+            'Hình in chuyển nhiệt sắc nét',
+            'Dáng Relaxed Fit, vừa vặn đứng form, Unisex',
+            'Mẫu nam: 1m81-70kg, mặc áo size L',
+            'Tự hào sản xuất tại Việt Nam'
+
         ],
         price: 390000
     },
@@ -227,6 +270,17 @@ product = [
             'asset/image/product/WEB1/AoThun/7/2484.ULSMV.TSZ705__CLASSICVENOM_1_DEN.png',
             'asset/image/product/WEB1/AoThun/7/2484.ULSMV.TSZ705__CLASSICVENOM-27_DEN_89.png',
             'asset/image/product/WEB1/AoThun/7/2484.ULSMV.TSZ705__CLASSICVENOM-28_DEN.png'
+        ],
+        introduce: [
+            'Chất liệu 100% Cotton',
+            'Định lượng vải 240gsm mềm mại thấm hút mồ hôi',
+            'Bo cổ dày dặn, vải không xù sau nhiều lần giặt, giữ form tốt hơn',
+            'Đường may 3 kim tỉ mỉ, hoàn thiện tốt',
+            'Hình in chuyển nhiệt sắc nét',
+            'Dáng Relaxed Fit, vừa vặn đứng form, Unisex',
+            'Mẫu nam: 1m81-70kg, mặc áo size L',
+            'Tự hào sản xuất tại Việt Nam'
+
         ],
         price: 390000
     },
@@ -277,6 +331,17 @@ product = [
             'asset/image/product/WEB1/AoThun/7/2484.ULSMV.TSZ705__CLASSICVENOM-27_DEN_89.png',
             'asset/image/product/WEB1/AoThun/7/2484.ULSMV.TSZ705__CLASSICVENOM-28_DEN.png'
         ],
+        introduce: [
+            'Chất liệu 100% Cotton',
+            'Định lượng vải 240gsm mềm mại thấm hút mồ hôi',
+            'Bo cổ dày dặn, vải không xù sau nhiều lần giặt, giữ form tốt hơn',
+            'Đường may 3 kim tỉ mỉ, hoàn thiện tốt',
+            'Hình in chuyển nhiệt sắc nét',
+            'Dáng Relaxed Fit, vừa vặn đứng form, Unisex',
+            'Mẫu nam: 1m81-70kg, mặc áo size L',
+            'Tự hào sản xuất tại Việt Nam'
+
+        ],
         price: 390000
     },
     {
@@ -325,6 +390,17 @@ product = [
             'asset/image/product/WEB1/AoThun/7/2484.ULSMV.TSZ705__CLASSICVENOM_1_DEN.png',
             'asset/image/product/WEB1/AoThun/7/2484.ULSMV.TSZ705__CLASSICVENOM-27_DEN_89.png',
             'asset/image/product/WEB1/AoThun/7/2484.ULSMV.TSZ705__CLASSICVENOM-28_DEN.png'
+        ],
+        introduce: [
+            'Chất liệu 100% Cotton',
+            'Định lượng vải 240gsm mềm mại thấm hút mồ hôi',
+            'Bo cổ dày dặn, vải không xù sau nhiều lần giặt, giữ form tốt hơn',
+            'Đường may 3 kim tỉ mỉ, hoàn thiện tốt',
+            'Hình in chuyển nhiệt sắc nét',
+            'Dáng Relaxed Fit, vừa vặn đứng form, Unisex',
+            'Mẫu nam: 1m81-70kg, mặc áo size L',
+            'Tự hào sản xuất tại Việt Nam'
+
         ],
         price: 390000
     },
@@ -375,6 +451,17 @@ product = [
             'asset/image/product/WEB1/AoThun/7/2484.ULSMV.TSZ705__CLASSICVENOM-27_DEN_89.png',
             'asset/image/product/WEB1/AoThun/7/2484.ULSMV.TSZ705__CLASSICVENOM-28_DEN.png'
         ],
+        introduce: [
+            'Chất liệu 100% Cotton',
+            'Định lượng vải 240gsm mềm mại thấm hút mồ hôi',
+            'Bo cổ dày dặn, vải không xù sau nhiều lần giặt, giữ form tốt hơn',
+            'Đường may 3 kim tỉ mỉ, hoàn thiện tốt',
+            'Hình in chuyển nhiệt sắc nét',
+            'Dáng Relaxed Fit, vừa vặn đứng form, Unisex',
+            'Mẫu nam: 1m81-70kg, mặc áo size L',
+            'Tự hào sản xuất tại Việt Nam'
+
+        ],
         price: 390000
     },
     {
@@ -423,6 +510,17 @@ product = [
             'asset/image/product/WEB1/AoThun/7/2484.ULSMV.TSZ705__CLASSICVENOM_1_DEN.png',
             'asset/image/product/WEB1/AoThun/7/2484.ULSMV.TSZ705__CLASSICVENOM-27_DEN_89.png',
             'asset/image/product/WEB1/AoThun/7/2484.ULSMV.TSZ705__CLASSICVENOM-28_DEN.png'
+        ],
+        introduce: [
+            'Chất liệu 100% Cotton',
+            'Định lượng vải 240gsm mềm mại thấm hút mồ hôi',
+            'Bo cổ dày dặn, vải không xù sau nhiều lần giặt, giữ form tốt hơn',
+            'Đường may 3 kim tỉ mỉ, hoàn thiện tốt',
+            'Hình in chuyển nhiệt sắc nét',
+            'Dáng Relaxed Fit, vừa vặn đứng form, Unisex',
+            'Mẫu nam: 1m81-70kg, mặc áo size L',
+            'Tự hào sản xuất tại Việt Nam'
+
         ],
         price: 390000
     },
@@ -473,6 +571,17 @@ product = [
             'asset/image/product/WEB1/AoThun/7/2484.ULSMV.TSZ705__CLASSICVENOM-27_DEN_89.png',
             'asset/image/product/WEB1/AoThun/7/2484.ULSMV.TSZ705__CLASSICVENOM-28_DEN.png'
         ],
+        introduce: [
+            'Chất liệu 100% Cotton',
+            'Định lượng vải 240gsm mềm mại thấm hút mồ hôi',
+            'Bo cổ dày dặn, vải không xù sau nhiều lần giặt, giữ form tốt hơn',
+            'Đường may 3 kim tỉ mỉ, hoàn thiện tốt',
+            'Hình in chuyển nhiệt sắc nét',
+            'Dáng Relaxed Fit, vừa vặn đứng form, Unisex',
+            'Mẫu nam: 1m81-70kg, mặc áo size L',
+            'Tự hào sản xuất tại Việt Nam'
+
+        ],
         price: 390000
     },
     {
@@ -521,6 +630,17 @@ product = [
             'asset/image/product/WEB1/AoThun/7/2484.ULSMV.TSZ705__CLASSICVENOM_1_DEN.png',
             'asset/image/product/WEB1/AoThun/7/2484.ULSMV.TSZ705__CLASSICVENOM-27_DEN_89.png',
             'asset/image/product/WEB1/AoThun/7/2484.ULSMV.TSZ705__CLASSICVENOM-28_DEN.png'
+        ],
+        introduce: [
+            'Chất liệu 100% Cotton',
+            'Định lượng vải 240gsm mềm mại thấm hút mồ hôi',
+            'Bo cổ dày dặn, vải không xù sau nhiều lần giặt, giữ form tốt hơn',
+            'Đường may 3 kim tỉ mỉ, hoàn thiện tốt',
+            'Hình in chuyển nhiệt sắc nét',
+            'Dáng Relaxed Fit, vừa vặn đứng form, Unisex',
+            'Mẫu nam: 1m81-70kg, mặc áo size L',
+            'Tự hào sản xuất tại Việt Nam'
+
         ],
         price: 390000
     }
