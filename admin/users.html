@@ -13,13 +13,13 @@
         <div class="navigation">
             <ul>
                 <li>
-                    <a href="./index.html">
+                    <a href="./admin.html">
                         <span class="icon"></span>
                         <span class="title"><h1>COOLMATE</h1></span>
                     </a>
                 </li>
                 <li>
-                    <a href="./index.html">
+                    <a href="./admin.html">
                         <span class="icon"><i class="fas fa-home"></i></span>
                         <span class="title">Tổng Quan</span>
                     </a>
@@ -37,19 +37,19 @@
                     </a>
                 </li>
                 <li>
-                    <a href="">
+                    <a href="./orders.html">
                         <span class="icon"><i class="fas fa-shopping-cart"></i></span>
                         <span class="title">Đơn Hàng</span>
                     </a>
                 </li>
                 <li>
-                    <a href="">
+                    <a href="./setting.html">
                         <span class="icon"><i class="fas fa-cog"></i></span>
                         <span class="title">Cài Đặt</span>
                     </a>
                 </li>
                 <li>
-                    <a href="">
+                    <a href="./index.html">
                         <span class="icon"><i class="fas fa-sign-out-alt"></i></span>
                         <span class="title">Đăng Xuất</span>
                     </a>
@@ -60,7 +60,7 @@
         <div class="main">
             <!-- nav bar -->
             <div class="topbar">
-                <div class="toggle" onclick="toggleMenu();">
+                <div class="toggle">
                     <i class="fas fa-bars"></i>
                 </div>
                 <div class="search">
@@ -70,7 +70,7 @@
                     </label>
                 </div>
                 <div class="user">
-                    <img src="../img/user.jpg">
+                    <a href="./setting.html"><img src="./img/user.jpg"></a>
                 </div>
             </div>
 
@@ -85,29 +85,134 @@
                     <table>
                         <thead>
                             <tr>
-                                <td>Mã Khách Hàng</td>
                                 <td>Tên Đăng Nhập</td>
                                 <td>Email</td>
                                 <td>Số Điện Thoại</td>
-                                <td>Khác</td>
+                                <td>Chức Năng</td>
                             </tr>
                         </thead>
-                        <tbody>
-                            <tr>
-                                <td>123</td>
+                        <tbody class="js-user-table">
+                            <!-- <tr>
                                 <td>hello23hihi</td>
                                 <td>abcd89@gmail.com</td>
                                 <td>0859458949</td>
                                 <td>
                                     <div class="tools">
                                         <button class="edit-btn"><i class="fas fa-edit"></i></button>
+                                        <button class="lock-btn"><i class="fas fa-lock"></i></button>
                                         <button class="delete-btn"><i class="fas fa-trash-alt"></i></button>
                                     </div>
                                 </td>
-                            </tr>
+                            </tr> -->
                         </tbody>
                     </table>
                 </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="add-popup">
+        <div class="bg-shadow"></div>
+        <div class="a-popup">
+            <button class="a-popup-close-btn"><i class="fas fa-times"></i></button>
+            <div class="a-popup-head">
+                <p>Thêm Khách Hàng Mới</p>
+            </div>
+            <form action="#" class="form">
+                <div class="input-box">
+                    <label>Tên Đăng Nhập</label>
+                    <input id="user" type="text" placeholder="Nhập tên đăng nhập" required>
+                </div>
+                <div class="input-box">
+                    <label>Email</label>
+                    <input id="email" type="email" placeholder="Nhập email" required>
+                </div>
+                <div class="input-box">
+                    <label>Số điện thoại</label>
+                    <input id="phone" type="text" placeholder="Nhập số điện thoại" required>
+                </div>
+                <div class="group-btn">
+                    <div class="cancel-button">
+                        <button>Hủy</button>
+                    </div>
+                    <div class="add-button">
+                        <button>Thêm</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="edit-popup">
+        <div class="bg-shadow"></div>
+        <div class="e-popup">
+            <button class="e-popup-close-btn"><i class="fas fa-times"></i></button>
+            <div class="e-popup-head">
+                <p>Sửa Thông Tin Khách Hàng</p>
+            </div>
+            <form action="#" class="form">
+                <div class="input-box">
+                    <label>Tên Đăng Nhập</label>
+                    <input id="edit-user" type="text" placeholder="Nhập tên đăng nhập" required>
+                </div>
+                <div class="input-box">
+                    <label>Email</label>
+                    <input id="edit-email" type="email" placeholder="Nhập email" required>
+                </div>
+                <div class="input-box">
+                    <label>Số điện thoại</label>
+                    <input id="edit-phone" type="text" placeholder="Nhập số điện thoại" required>
+                </div>
+                <!-- <div class="input-box">
+                    <label>Mật khẩu</label>
+                    <input type="password" placeholder="Nhập mật khẩu" required>
+                </div>
+                <div class="input-box">
+                    <label>Xác nhận mật khẩu</label>
+                    <input type="password" placeholder="Nhập lại mật khẩu" required>
+                </div> -->
+                <div class="e-group-btn">
+                    <div class="e-cancel-button">
+                        <button>Hủy</button>
+                    </div>
+                    <div class="edit-button">
+                        <button>Cập Nhật</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+        
+    <div class="lock-popup">
+        <div class="bg-shadow"></div>
+        <div class="l-popup">
+            <div class="l-popup-head">
+                <p>Bạn có chắc chắn muốn khóa tài khoản?</p>
+                <button class="l-popup-close-btn"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="l-popup-body">
+                <p>Nếu khóa tài khoản, khách hàng sẽ không thể truy cập vào tài khoản đang sử dụng.</p>
+            </div>
+            <div class="l-popup-foot">
+                <button class="l-popup-btn l-popup-cancel-btn">Hủy</button>
+                <button class="l-popup-btn l-popup-confirm-btn">Xác nhận</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="delete-popup">
+        <div class="bg-shadow"></div>
+        <div class="popup">
+            <div class="popup-head">
+                <p>Bạn có chắc chắn muốn xóa tài khoản?</p>
+                <button class="popup-close-btn"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="popup-body">
+                <p>Nếu xóa tài khoản, bạn sẽ không thể tiếp tục sử dụng tài khoản đã xóa.</p>
+            </div>
+            <div class="popup-foot">
+                <button class="popup-btn popup-cancel-btn">Hủy</button>
+                <button class="popup-btn popup-confirm-btn">Xác nhận</button>
             </div>
         </div>
     </div>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="stylesheet" href="./css/orders.css">   
+</head>
+<body>
+    <div class="container">
+        <!-- side bar -->
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="./admin.html">
+                        <span class="icon"></span>
+                        <span class="title"><h1>COOLMATE</h1></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="./admin.html">
+                        <span class="icon"><i class="fas fa-home"></i></span>
+                        <span class="title">Tổng Quan</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="./users.html">
+                        <span class="icon"><i class="fas fa-users"></i></span>
+                        <span class="title">Khách Hàng</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="./products.html">
+                        <span class="icon"><i class="fas fa-gifts"></i></span>
+                        <span class="title">Sản Phẩm</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fas fa-shopping-cart"></i></span>
+                        <span class="title">Đơn Hàng</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="./setting.html">
+                        <span class="icon"><i class="fas fa-cog"></i></span>
+                        <span class="title">Cài Đặt</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="./index.html">
+                        <span class="icon"><i class="fas fa-sign-out-alt"></i></span>
+                        <span class="title">Đăng Xuất</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="main">
+            <!-- nav bar -->
+            <div class="topbar">
+                <div class="toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <div class="search">
+                    <label>
+                        <input type="text" placeholder="Tìm Kiếm">
+                        <i class="fas fa-search"></i>
+                    </label>
+                </div>
+                <div class="user">
+                    <a href="./setting.html"><img src="./img/user.jpg"></a>
+                </div>
+            </div>
+
+            <div class="user-table">
+                <div class="inside-table">
+                    <div class="userHeader">
+                        <h2>Danh Sách</h2>
+                        <div>
+                            
+                        </div>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <td>Mã Đơn Hàng</td>
+                                <td>Tên Khách Hàng</td>
+                                <td>Tổng Đơn Hàng</td>
+                                <td>Ngày Đặt Hàng</td>
+                                <td>Địa Chỉ</td>
+                                <td>Tình Trạng Đơn Hàng</td>
+                                <td>Chi Tiết</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>912873</td>
+                                <td>hello23hihi</td>
+                                <td>500000</td>
+                                <td>17/10/2024</td>
+                                <td>Quận Bình Tân</td>
+                                <td><span class="status delivered">Thành công</span></td>
+                                <td><button class="edit-btn"><i class="fas fa-edit"></i></button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/script.js"></script>
+</body>
+</html>

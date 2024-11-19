@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
-    <link rel="stylesheet" href="./css/style.css">   
+    <link rel="stylesheet" href="./css/products.css">   
 </head>
 <body>
     <div class="container">
@@ -13,13 +13,13 @@
         <div class="navigation">
             <ul>
                 <li>
-                    <a href="./index.html">
+                    <a href="./admin.html">
                         <span class="icon"></span>
                         <span class="title"><h1>COOLMATE</h1></span>
                     </a>
                 </li>
                 <li>
-                    <a href="./index.html">
+                    <a href="./admin.html">
                         <span class="icon"><i class="fas fa-home"></i></span>
                         <span class="title">Tổng Quan</span>
                     </a>
@@ -37,19 +37,19 @@
                     </a>
                 </li>
                 <li>
-                    <a href="">
+                    <a href="./orders.html">
                         <span class="icon"><i class="fas fa-shopping-cart"></i></span>
                         <span class="title">Đơn Hàng</span>
                     </a>
                 </li>
                 <li>
-                    <a href="">
+                    <a href="./setting.html">
                         <span class="icon"><i class="fas fa-cog"></i></span>
                         <span class="title">Cài Đặt</span>
                     </a>
                 </li>
                 <li>
-                    <a href="">
+                    <a href="./index.html">
                         <span class="icon"><i class="fas fa-sign-out-alt"></i></span>
                         <span class="title">Đăng Xuất</span>
                     </a>
@@ -60,7 +60,7 @@
         <div class="main">
             <!-- nav bar -->
             <div class="topbar">
-                <div class="toggle" onclick="toggleMenu();">
+                <div class="toggle">
                     <i class="fas fa-bars"></i>
                 </div>
                 <div class="search">
@@ -70,7 +70,7 @@
                     </label>
                 </div>
                 <div class="user">
-                    <img src="../img/user.jpg">
+                    <a href="./setting.html"><img src="./img/user.jpg"></a>
                 </div>
             </div>
 
@@ -87,14 +87,20 @@
                             <tr>
                                 <td>Mã Sản Phẩm</td>
                                 <td>Tên Sản Phẩm</td>
+                                <td>Hình Ảnh</td>
+                                <td>Chất Liệu</td>
+                                <td>Số Lượng</td>
                                 <td>Đơn giá(VND)</td>
-                                <td>Khác</td>
+                                <td>Chức Năng</td>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
                                 <td>789456</td>
-                                <td>Áo sơ mi</td>
+                                <td>Áo thun</td>
+                                <td><img class="product-img" src="./img/2484.ULSMV.TSZ705__CLASSICVENOM_1_DEN.png" alt=""></td>
+                                <td>Cotton</td>
+                                <td>50</td>
                                 <td>200000</td>
                                 <td>
                                     <div class="tools">
@@ -110,6 +116,117 @@
         </div>
     </div>
 
-    <script src="./js/script.js"></script>
+    <div class="add-product-popup">
+        <div class="bg-shadow"></div>
+        <div class="a-p-popup">
+            <button class="a-p-popup-close-btn"><i class="fas fa-times"></i></button>
+            <div class="a-p-popup-head">
+                <p>Thêm Sản Phẩm Mới</p>
+            </div>
+            <form action="#" class="form">
+                <div class="container-img">
+                    <div class="img-area">
+                        <label for="image"><i class="fas fa-cloud-upload-alt icon"></i></label>
+                        <input type="file" id="image" accept="image/*" hidden>
+                        <p>Tải Hình Ảnh Lên</p>
+                    </div>
+                </div>
+                <div class="input-box">
+                    <label>Mã Sản Phẩm</label>
+                    <input type="text" placeholder="Nhập mã sản phẩm" required>
+                </div>
+                <div class="input-box">
+                    <label>Tên Sản Phẩm</label>
+                    <input type="text" placeholder="Nhập tên sản phẩm" required>
+                </div>
+                <div class="input-box">
+                    <label>Chất Liệu</label>
+                    <input type="text" placeholder="Nhập chất liệu" required>
+                </div>
+                <div class="input-box">
+                    <label>Số Lượng</label>
+                    <input type="text" placeholder="Nhập chất liệu" required>
+                </div>
+                <div class="input-box">
+                    <label>Đơn Giá</label>
+                    <input type="text" placeholder="Nhập giá sản phẩm" required>
+                </div>
+                <div class="a-p-group-btn">
+                    <div class="a-p-cancel-button">
+                        <button>Hủy</button>
+                    </div>
+                    <div class="add-p-button">
+                        <button>Thêm</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="edit-popup">
+        <div class="bg-shadow"></div>
+        <div class="e-popup">
+            <button class="e-popup-close-btn"><i class="fas fa-times"></i></button>
+            <div class="e-popup-head">
+                <p>Thêm Sản Phẩm Mới</p>
+            </div>
+            <form action="#" class="form">
+                <div class="container-img">
+                    <div class="img-area">
+                        <label for="image"><i class="fas fa-cloud-upload-alt icon"></i></label>
+                        <input type="file" id="image" accept="image/*" hidden>
+                        <p>Tải Hình Ảnh Lên</p>
+                    </div>
+                </div>
+                <div class="input-box">
+                    <label>Mã Sản Phẩm</label>
+                    <input type="text" placeholder="Nhập mã sản phẩm" required>
+                </div>
+                <div class="input-box">
+                    <label>Tên Sản Phẩm</label>
+                    <input type="text" placeholder="Nhập tên sản phẩm" required>
+                </div>
+                <div class="input-box">
+                    <label>Chất Liệu</label>
+                    <input type="text" placeholder="Nhập chất liệu" required>
+                </div>
+                <div class="input-box">
+                    <label>Số Lượng</label>
+                    <input type="text" placeholder="Nhập chất liệu" required>
+                </div>
+                <div class="input-box">
+                    <label>Đơn Giá</label>
+                    <input type="text" placeholder="Nhập giá sản phẩm" required>
+                </div>
+                <div class="e-group-btn">
+                    <div class="e-cancel-button">
+                        <button>Hủy</button>
+                    </div>
+                    <div class="e-button">
+                        <button>Thêm</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="delete-popup">
+        <div class="bg-shadow"></div>
+        <div class="popup">
+            <div class="popup-head">
+                <p>Bạn có chắc chắn muốn xóa sản phẩm?</p>
+                <button class="popup-close-btn"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="popup-body">
+                <p>Nếu xóa sản phẩm, bạn sẽ không thể tiếp tục sử dụng sản phẩm đã xóa.</p>
+            </div>
+            <div class="popup-foot">
+                <button class="popup-btn popup-cancel-btn">Hủy</button>
+                <button class="popup-btn popup-confirm-btn">Xác nhận</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/products.js"></script>
 </body>
 </html>
