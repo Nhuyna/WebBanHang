@@ -5,18 +5,28 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://kit.fontawesome.com/d671763fab.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="../asset/css/Signup.css">
-    <link rel="stylesheet" href="../asset/css/login.css">
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="./../asset/css/style.css">
+    <link rel="stylesheet" href="./../asset/css/Signup.css">
+    <script type="module" src="./js/script.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
     <title>LookBook - Hệ thống thời trang nam 360</title>
 </head>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
 
 <body>
-    <!-- <header>
+    <header>
         <div class="logo">
             <img src="img/logo.png" alt="logo" />
         </div>
@@ -73,8 +83,7 @@
             <li><i class="fa fa-user"></i></li>
             <li><i class="fa fa-shopping-bag"></i></li>
         </div>
-    </header> -->
-
+    </header>
     <div class="body-signup">
         <div class="container">
             <div class="sign-up-header">ĐĂNG KÝ</div>
@@ -95,12 +104,14 @@
                     </div>
                     <div class="input-box">
                         <span class="detail">Số điện thoại</span>
-                        <input id="phone-number" name="phone-number" type="text" class="form-control" placeholder="Số điện thoại">
+                        <input id="phone-number" name="phone-number" type="text" class="form-control"
+                            placeholder="Số điện thoại">
                         <span class="invalid-message"></span>
                     </div>
                     <div class="input-box">
                         <span class="detail">Mật khẩu</span>
-                        <input id="password" name="password" type="password" class="form-control" placeholder="Nhập mật khẩu của bạn">
+                        <input id="password" name="password" type="password" class="form-control"
+                            placeholder="Nhập mật khẩu của bạn">
                         <span class="invalid-message"></span>
                     </div>
                     <div class="input-box">
@@ -112,16 +123,14 @@
                     <!-- <input type="submit" value="Đăng nhập" class="form-submit" class="sign-up-button"
                         style=" border: none;"> -->
                     <button type="submit" class="sign-up-button form-submit">
-                        ĐĂNG KÝ
+                        Đăng ký
                     </button>
 
                 </form>
             </div>
         </div>
     </div>
-    <div class="modal-background"></div>
-
-    <!-- <section class="app-container">
+    <section class="app-container">
         <p>Tải ứng dụng</p>
         <div class="app-google">
             <img src="img/appstore.png" alt="" />
@@ -130,7 +139,7 @@
         <p>Nhận bản tin của chúng tôi</p>
         <input type="text" placeholder="Nhập địa chỉ email của bạn..." />
     </section>
-
+    <!-- ----------------------footer-------------- -->
     <div class="footer-top">
         <li>
             <a href=""><img src="img/Logo-thong-bao-mau-xanh.png" alt="" /></a>
@@ -151,19 +160,12 @@
             Email: 360boutique.vn@gmail.com <br />
             GPKD: <b>0107756568 </b>
         </p>
-    </div> -->
+    </div>
 </body>
-<script src="../asset/js/validator.js"></script>
+<script src="./js/validator.js"></script>
 <script>
     let userList = JSON.parse(localStorage.getItem('userList'));
-    console.log(userList);
-    const showUp = {
-        // Đăng ký thành công
-        image: './img/dau_tick (2).png',
-        announce: 'Chúc mừng! Bạn đã đăng ký thành công',
-        new_page: './login.html',
-        mess: 'Đăng nhập ngay thôi nào'
-    };
+    // console.log(userList);
     Validator({
         form: '#form-1',
         rules: [
@@ -183,7 +185,7 @@
             // console.log (data);
             userList.push(data);
             localStorage.setItem('userList', JSON.stringify(userList));
-            announce(showUp);
+            window.location.href = "login.html";
             console.log(userList);
         }
     });
