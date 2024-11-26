@@ -89,9 +89,7 @@ function renderTable(){
             delete_popup.classList.add('active');
             const popup_confirm_btn = document.querySelector('.popup-confirm-btn');
             popup_confirm_btn.addEventListener('click', ()=>{
-                userList.splice(index, 1);
                 delete_popup.classList.remove('active');
-                renderTable();
             });
         });
     });
@@ -138,12 +136,11 @@ function renderTable(){
             edit_phone.value = userList[i].phone;
             edit_popup.classList.add('active');
             edit_button.addEventListener('click', ()=>{
-                userList[i].username = edit_user.value;
-                userList[i].email = edit_email.value;
-                userList[i].phone = edit_phone.value;
+                // userList[i].username = edit_user.value;
+                // userList[i].email = edit_email.value;
+                // userList[i].phone = edit_phone.value;
                 edit_popup.classList.remove('active');
-                renderTable();
-                // console.log(userList[i]);
+                // renderTable();
             });
         });
         

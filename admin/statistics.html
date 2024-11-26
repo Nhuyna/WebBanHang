@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="stylesheet" href="./css/statistics.css">
+</head>
+<body>
+    <div class="container">
+        <!-- side bar -->
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="./admin.html">
+                        <span class="icon"></span>
+                        <span class="title"><h1>COOLMATE</h1></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="./admin.html">
+                        <span class="icon"><i class="fas fa-home"></i></span>
+                        <span class="title">Tổng Quan</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="./users.html">
+                        <span class="icon"><i class="fas fa-users"></i></span>
+                        <span class="title">Khách Hàng</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="./products.html">
+                        <span class="icon"><i class="fas fa-gifts"></i></span>
+                        <span class="title">Sản Phẩm</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="./orders.html">
+                        <span class="icon"><i class="fas fa-shopping-cart"></i></span>
+                        <span class="title">Đơn Hàng</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fas fa-chart-bar"></i></span>
+                        <span class="title">Thống Kê</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="./setting.html">
+                        <span class="icon"><i class="fas fa-cog"></i></span>
+                        <span class="title">Cài Đặt</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="./index.html">
+                        <span class="icon"><i class="fas fa-sign-out-alt"></i></span>
+                        <span class="title">Đăng Xuất</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="main">
+            <!-- nav bar -->
+            <div class="topbar">
+                <div class="toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <div class="search">
+                    <label>
+                        <input type="text" placeholder="Tìm Kiếm">
+                        <i class="fas fa-search"></i>
+                    </label>
+                </div>
+                <div class="user">
+                    <a href="./setting.html"><img src="./img/user.jpg"></a>
+                </div>
+            </div>
+            
+            <div class="statistics-container">
+                <div class="statistic">
+                    <div class="statistic-header">
+                        <div class="header">
+                            <h2>Thống Kê Tình Hình Kinh Doanh</h2>
+                        </div>
+                        <div class="filter-container">
+                            <div class="filter">
+                                <p>Lọc theo:</p>
+                                <select name="" id="statistic-option">
+                                    <option value="Tất cả">Tất cả</option>
+                                    <option value="Mặt hàng">Mặt hàng</option>
+                                    <option value="Khách hàng">Khách hàng</option>
+                                </select>
+                            </div>
+                            <div class="search-box">
+                                Từ ngày: <input type="date" id="start-date">
+                                Đến ngày: <input type="date" id="end-date">
+                                <button id="search-btn">Tìm Kiếm</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="statistic-body">
+                        <div class="products">
+                            <div class="product-header">
+                                <h4>Thống kê mặt hàng</h4>
+                            </div>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <td>Mã Sản Phẩm</td>
+                                        <td>Tên Sản Phẩm</td>
+                                        <td>Hình Ảnh</td>
+                                        <td>Số Lượng bán ra</td>
+                                        <td>Tổng doanh thu</td>
+                                    </tr>
+                                </thead>
+                                <tbody class="product-list">
+
+                                </tbody>
+                                <tfoot class="total-price">
+
+                                </tfoot>
+                            </table>
+                        </div>
+                        <div class="customers">
+                            <div class="customer-header">
+                                <h4>Thống kê khách hàng</h4>
+                            </div>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <td>Mã Sản Phẩm</td>
+                                        <td>Tên Sản Phẩm</td>
+                                        <td>Hình Ảnh</td>
+                                        <td>Số Lượng bán ra</td>
+                                        <td>Tổng doanh thu</td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                </tbody>
+                                <tfoot>
+
+                                </tfoot>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/statistics.js"></script>
+</body>
+</html>

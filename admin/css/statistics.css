@@ -149,30 +149,6 @@ body{
     height: 100%;
     object-fit: cover;
 }
-.status{
-    position: relative;
-    padding: 2px 4px;
-    color: #fff;
-    border-radius: 4px;
-    font-size: 14px;
-    font-weight: 300;
-    letter-spacing: 1px;
-}
-.delivered{
-    background: #8de02c;
-}
-.pending{
-    background: #f9ca3f;
-}
-.return{
-    background: #f00;
-}
-.inprogress{
-    background: #1795ce;
-}
-
-/* Responsive */
-
 @media (max-width: 992px){
     .navigation{
         left: -300px;
@@ -236,34 +212,51 @@ body{
         left: 0;
     }
 }
-.user-table{
+.statistics-container{
     position: relative;
     width: 100%;
     padding: 20px;
 }
-.user-table .inside-table{
+.statistics-container .statistic{
     position: relative;
     width: 100%;
     padding: 20px;
     background: #fff;
 }
-.user-table .inside-table .userHeader{
+.statistics-container .statistic-header .header h2{
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    font-size: 30px;
+    font-weight: 600;
+    margin: 10px 0;
 }
-.user-table .inside-table .userHeader .search-box{
+.statistic-header .filter-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+.filter select{
+    background: #fff;
+    font-size: 16px;
+    width: 120px;
+    border: 1px solid rgb(0, 0, 0, 0.5);
+    border-radius: 50px;
+    outline: none;
+    cursor: pointer;
+}
+.statistic-header .filter-container .search-box{
     font-weight: 600;
     font-size: 16px;
 }
-.user-table .inside-table .userHeader .search-box input{
+.statistic-header .filter-container .search-box input{
     width: 120px;
     border-radius: 8px;
     margin: 0 10px;
     border: 1px solid rgb(0, 0, 0, 0.5);
     justify-content: center;
 }
-.user-table .inside-table .userHeader .search-box button{
+.statistic-header .filter-container .search-box button{
     width: 100px;
     height: 30px;
     justify-content: center;
@@ -276,190 +269,61 @@ body{
     border: none;
     outline: none;
 }
-.user-table .inside-table .userHeader h2{
-    font-size: 30px;
-    font-weight: 600;
-}
-.user-table .inside-table table{
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 10px;
-}
-.user-table .inside-table table tr{
-    border-bottom: 1px solid rgb(0, 0, 0, 0.2);
-}
-.user-table .inside-table table tr td{
-    padding: 9px 5px;
-}
-.user-table .inside-table table thead td{
-    font-weight: 600;
-}
-.user-table .inside-table table tbody tr:last-child{
-    border-bottom: none;
-}
-.detail{
-    font-size: 24px;
-    color: #03a9f4;
-    background: #fff;
-    border: none;
-    cursor: pointer;
-}
-.order-popup{
-    position: relative;
-    display: none;
-}
-.order-popup.active{
-    display: block;
-}
-.order-popup .bg-shadow{
-    position: fixed;
-    top: 0;
-    background: rgb(0, 0, 0, 0.5);
-    width: 100%;
-    height: 100%;
-}
-.order-details{
-    position: relative;
-    background: #fff;
-    max-width: 700px;
-    width: 100%;
-    left: 50%;
-    padding: 15px;
-    border-radius: 8px;
-    transform: translate(-50%, 5%);
-    animation: modalShow 0.5s linear;
-}
-.order-details .close-btn{
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    width: 16px;
-    height: 16px;
-    border: 0;
-    cursor: pointer;
-}
-.order-details .order-header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid rgb(0, 0, 0, 0.3);
-}
-.order-details .order-header .logo-image{
-    width: 100px;
-    height: 100px;
-}
-.order-details .order-header .order-id{
+
+/* Thống kê sản phẩm */
+.statistic-body .product-header h4{
     font-size: 20px;
     font-weight: 600;
-    color: #423ff9ea;
+    margin: 30px 0 20px;
 }
-.order-details .order-body{
-    margin: 20px 0;
-    padding: 10px;
-}
-.order-details .order-body .user-info{
-    margin: 20px 0;
-}
-.order-details .order-body .user-info{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    align-content: flex-start;
-}
-.order-details .order-body .user-info div p:first-child{
-    font-size: 24px;
-    font-weight: 600;
-    color: #1795ce;
-}
-.order-details .order-body .user-info div p:nth-child(2){
-    font-size: 18px;
-    font-weight: 600;
-}
-.order-details .order-body .product-info{
-    padding-bottom: 30px;
-    border-bottom: 1px solid rgb(0, 0, 0, 0.3);
-}
-.order-details .order-body .product-info table{
+.statistic-body .products table{
+    margin-bottom: 20px;
     width: 100%;
     border-collapse: collapse;
-    margin: 10px 0;
 }
-.product-info table thead td{
-    font-weight: 600;
-    font-size: 18px;
+.statistic-body table tr{
+    border-bottom: 1px solid rgb(0, 0, 0, 0.2);
 }
-.product-info table tr{
-    border-bottom: 1px solid rgb(0, 0, 0, 0.1);
-}
-.product-info table tbody tr:last-child{
-    border-bottom: none;
-}
-.product-info table tr td{
+.statistic-body table tr td{
     padding: 9px 5px;
 }
-.product-info table thead tr td:nth-child(3),
-.product-info table tbody tr td:nth-child(3){
+.statistic-body table thead td{
+    font-weight: 600;
+}
+.statistic-body table tbody .product-img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+.statistic-body table tbody td:last-child{
     text-align: center;
 }
-.product-info table thead tr td:last-child,
-.product-info table tbody tr td:last-child{
-    text-align: right;
+.statistic-body table tfoot tr{
+    border-bottom: none;
 }
-.order-body .price{
-    display: flex;
-    justify-content: end;
-    width: 100%;
-    border-bottom: 1px solid rgb(0, 0, 0, 0.3);
-}
-.order-body .summary{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    text-align: right;
-    margin: 30px 0;
-    width: 50%;
-}
-.order-body .summary p {
-    padding: 9px 5px;
-}
-.order-body .summary .sum-title{
-    font-size: 18px;
+.statistic-body table tfoot tr td{
+    padding: 20px 0;
+    font-size: 20px;
     font-weight: 600;
-    width: 50%;
-    text-align: left;
+    color: #03a9f4;
 }
-.order-body .summary .total-price{
-    font-size: 18px;
-    width: 50%;
-    text-align: right;
+.statistic-body table tfoot tr td:last-child{
+    text-align: center;
 }
-.order-foot{
-    margin: 20px 0 0 0;
-}
-.order-foot .note p{
-    font-size: 18px;
-}
-.order-foot .note span{
-    font-weight: 600;
-    color: #f00;
-}
-@keyframes modalShow {
-    from {
-        transform: translate(-50%, -50%);
-        opacity: 0;
-    }
 
-    to {
-        transform: translate(-50%, 5%);
-        opacity: 1;
-    }
+/* Thống kê khách hàng */
+.statistic-body .customers{
+    margin-top: 20px;
 }
-.select-status select{
-    background: #fff;
-    font-size: 16px;
+.statistic-body .customer-header h4{
+    font-size: 20px;
     font-weight: 600;
-    width: 160px;
-    border: none;
-    outline: none;
-    cursor: pointer;
+    margin: 30px 0 20px;
+}
+.statistic-body .customers table{
+    margin-bottom: 20px;
+    width: 100%;
+    border-collapse: collapse;
 }

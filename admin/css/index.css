@@ -46,14 +46,16 @@ body{
     color: #fff;
     padding: 20px 45px 20px 20px;
 }
-.input-box.invalid input{
-    border: 2px solid red;
+
+.invalid-user{
+    color: red;
+    padding: 5px 10px;
+    display: none;
 }
-/* i.invalid{
+.invalid-pass{
     color: red;
-} */
-.invalid-message{
-    color: red;
+    padding: 5px 10px;
+    display: none;
 }
 .input-box input::placeholder{
     color: #fff;
@@ -72,7 +74,7 @@ body{
     display: flex;
     justify-content: space-between;
     font-size: 14.5px;
-    margin: -15px 0 15px;
+    margin: -10px 0 10px;
 }
 .remember-forgot label input{
     accent-color: #fff;

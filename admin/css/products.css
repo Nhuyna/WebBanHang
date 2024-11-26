@@ -404,7 +404,7 @@ body{
     border: 0;
     cursor: pointer;
 }
-.add-product-popup .a-p-popup .form{
+.add-product-popup .a-p-popup .form-add-product{
     margin-top: 30px;
 }
 .container-img{
@@ -427,35 +427,41 @@ body{
     overflow: hidden;
     border: 1px solid #707070;
 }
-
-.img-area .icon{
-    font-size: 100px;
+.img-area .upload{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 10;
+    height: 125px;
+    display: none;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
+    background: rgb(0, 0, 0, 0.3);
 }
-.img-area p{
-    font-size: 20px;
-    font-weight: 500;
-    margin-bottom: 6px;
+.img-area .upload i{
+    color: #fff;
+    font-size: 60px;
+}
+.img-area:hover .upload{
+    display: flex;
 }
 .img-area img{
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center;
     /* z-index: 100; */
 }
-.add-product-popup .a-p-popup .form .input-box{
+.add-product-popup .a-p-popup .form-add-product .input-box{
     width: 100%;
     margin-top: 20px;
 }
-.add-product-popup .a-p-popup .form .input-box label{
+.add-product-popup .a-p-popup .form-add-product .input-box label{
     color: #333;
     font-weight: 600;
 }
-.add-product-popup .a-p-popup .form .input-box input{
+.add-product-popup .a-p-popup .form-add-product .input-box input{
     position: relative;
     height: 50px;
     width: 100%;
@@ -467,13 +473,13 @@ body{
     border-radius: 6px;
     padding: 0 15px;
 }
-.add-product-popup .a-p-popup .form .a-p-group-btn{
+.add-product-popup .a-p-popup .form-add-product .a-p-group-btn{
     display: flex;
     align-items: flex-end;
     justify-content: flex-end;
     column-gap: 20px;
 }
-.add-product-popup .a-p-popup .form .add-p-button button{
+.add-product-popup .a-p-popup .form-add-product .add-p-button button{
     height: 55px;
     width: 100px;
     background: #03a9f4;
@@ -486,10 +492,10 @@ body{
     cursor: pointer;
     transition: all 0.2s ease;
 }
-.add-product-popup .a-p-popup .form .add-p-button button:hover{
+.add-product-popup .a-p-popup .form-add-product .add-p-button button:hover{
     background-color: #037bf4;
 }
-.add-product-popup .a-p-popup .form .a-p-cancel-button button{
+.add-product-popup .a-p-popup .form-add-product .a-p-cancel-button button{
     height: 55px;
     width: 100px;
     background: rgb(255, 0, 0);
@@ -502,7 +508,7 @@ body{
     cursor: pointer;
     transition: all 0.2s ease;
 }
-.add-product-popup .a-p-popup .form .a-p-cancel-button button:hover{
+.add-product-popup .a-p-popup .form-add-product .a-p-cancel-button button:hover{
     background-color: rgba(255, 0, 0, 0.571);
 }
 @keyframes modalShow_addButton {
@@ -571,18 +577,18 @@ body{
     border: 0;
     cursor: pointer;
 }
-.edit-popup .e-popup .form{
+.edit-popup .e-popup .form-edit-product{
     margin-top: 30px;
 }
-.edit-popup .e-popup .form .input-box{
+.edit-popup .e-popup .form-edit-product .input-box{
     width: 100%;
     margin-top: 20px;
 }
-.edit-popup .e-popup .form .input-box label{
+.edit-popup .e-popup .form-edit-product .input-box label{
     color: #333;
     font-weight: 600;
 }
-.edit-popup .e-popup .form .input-box input{
+.edit-popup .e-popup .form-edit-product .input-box input{
     position: relative;
     height: 50px;
     width: 100%;
@@ -594,13 +600,13 @@ body{
     border-radius: 6px;
     padding: 0 15px;
 }
-.edit-popup .e-popup .form .e-group-btn{
+.edit-popup .e-popup .form-edit-product .e-group-btn{
     display: flex;
     align-items: flex-end;
     justify-content: flex-end;
     column-gap: 20px;
 }
-.edit-popup .e-popup .form .e-button button{
+.edit-popup .e-popup .form-edit-product .e-button button{
     height: 55px;
     width: 100px;
     background: #03a9f4;
@@ -613,10 +619,10 @@ body{
     cursor: pointer;
     transition: all 0.2s ease;
 }
-.edit-popup .e-popup .form .e-button button:hover{
+.edit-popup .e-popup .form-edit-product .e-button button:hover{
     background-color: #037bf4;
 }
-.edit-popup .e-popup .form .e-cancel-button button{
+.edit-popup .e-popup .form-edit-product .e-cancel-button button{
     height: 55px;
     width: 100px;
     background: rgb(255, 0, 0);
@@ -629,6 +635,6 @@ body{
     cursor: pointer;
     transition: all 0.2s ease;
 }
-.edit-popup .e-popup .form .e-cancel-button button:hover{
+.edit-popup .e-popup .form-edit-product .e-cancel-button button:hover{
     background-color: rgba(255, 0, 0, 0.571);
 }
