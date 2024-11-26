@@ -28,6 +28,7 @@ function Validator(option) {
 
     }
     let formElement = document.querySelector(option.form);
+    console.log(formElement);
 
     if (formElement) {
 
@@ -36,6 +37,7 @@ function Validator(option) {
 
         formElement.onsubmit = function (e) {
             e.preventDefault();
+            console.log("nút submit");
             let isFormValid = true;
 
             option.rules.forEach(function (rule) {
@@ -43,19 +45,24 @@ function Validator(option) {
                 let isValid = validate(inputElement, rule);
                 if (isValid && isFormValid) {
                     isFormValid = false;
+                    console.log("false nè");
                 }
             });
 
             if (isFormValid) {
+                console.log("test");
                 if (typeof option.onSubmit === 'function') {
                     let enableInputs = formElement.querySelectorAll('[name]:not([disabled])');
                     let formValues = Array.from(enableInputs).reduce(function (values, input) {
                         return (values[input.name] = input.value) && values;
                     }, {});
                     option.onSubmit(formValues);
-                    // console.log(enableInputs);
+                    console.log(enableInputs);
+                    console.log(formValues);
+                    // console.log("hiiiiii");
+                    // console.log(option.onSubmit);
                 }
-                
+
             }
 
         }
@@ -124,23 +131,23 @@ Validator.isConfirmed = function (selector, getCofirmValue, message) {
         }
     }
 }
-Validator.isNumber = function (selector) {
-    return {
-        selector: selector,
-        test: function (value) {
-            let num = /^[+-]?\d+(\.\d+)?$/;
+// Validator.isNumber = function (selector) {
+//     return {
+//         selector: selector,
+//         test: function (value) {
+//             let num = /^[+-]?\d+(\.\d+)?$/;
 
-            return (num.test(value) ? undefined : 'Vui lòng nhập đúng định dạng số điện thoại');
-        }
-    };
-}
+//             return (num.test(value) ? undefined : 'Vui lòng nhập đúng định dạng số điện thoại');
+//         }
+//     };
+// }
 const passField = document.querySelector("#pass");
 const showBtn = document.querySelector(".show-btn i");
-showBtn.onclick = (()=>{
-    if(passField.type === "password"){
+showBtn.onclick = (() => {
+    if (passField.type === "password") {
         passField.type = "text";
         showBtn.classList.add("hide-btn");
-    }else{
+    } else {
         passField.type = "password";
         showBtn.classList.remove("hide-btn");
     }
@@ -150,7 +157,7 @@ function Validator_login(option) {
     let selectorRules = {};
     //Hàm thực hiẹn validate
     function validate(inputElement, rule) {
-        
+
         let rules = selectorRules[rule.selector];
         let input;
         for (let i = 0; i < rules.length; ++i) {
@@ -200,7 +207,7 @@ function Validator_login(option) {
                     option.onSubmit(formValues);
                     // console.log(enableInputs);
                 }
-                
+
             }
 
         }
@@ -244,7 +251,7 @@ Validator_login.isRequired = function (selector, message) {
 }
 
 // Pop up thông báo
-function announcement(showUp){
+function announcement(showUp) {
     let popUp = '';
     popUp += `
     <div class="modal_inner">
@@ -264,11 +271,11 @@ function announcement(showUp){
     </div>`;
     const modalsucess = document.querySelector('.modalSuccess');
     modalsucess.innerHTML = popUp;
-    setTimeout(function(){
+    setTimeout(function () {
         modalsucess.classList.add('active');
-    },1000)
+    }, 1000)
 }
-function announce(showUp){
+function announce(showUp) {
     let popUp = '';
     popUp += `
     <div class="modal_inner">
@@ -288,7 +295,7 @@ function announce(showUp){
     </div>`;
     const modalsucess = document.querySelector('.modal-background');
     modalsucess.innerHTML = popUp;
-    setTimeout(function(){
+    setTimeout(function () {
         modalsucess.classList.add('active');
-    },1000)
+    }, 1000)
 }

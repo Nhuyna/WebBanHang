@@ -178,9 +178,9 @@ header .row-flex {
   background-color: var(--main-backgorund);
 }
 .search-css {
+  top: 50px;
   position: absolute;
   width: 100%;
-  height: 500px;
   background-color: rgba(red, green, blue, 0.5);
 }
 
@@ -190,29 +190,81 @@ header .row-flex {
 /* .search-click {
   display: none;
 } */
-.search-css {
+/* Khung chứa toàn bộ các phần tử tìm kiếm */
+.search-box {
+  margin-bottom: 50px;
+  background-color: white;
+  padding: 20px;
+  margin-top: 50px;
+  width: 100%;
   display: flex;
   justify-content: center;
 }
-.search-box {
-  border-radius: 20px;
-  display: inline-block;
-  padding-left: 10%;
+
+/* Container chứa các phần tử input tìm kiếm, dropdown */
+.search-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   width: 100%;
-  height: 600px;
-  margin-top: 100px;
-  margin-left: 150px;
-  margin-right: 150px;
-  padding-top: 5%;
-  background-color: white;
+  max-width: 800px;
+  gap: 15px;
+  position: relative;
 }
-.search-box input {
-  width: 80%;
-  aspect-ratio: 10/1;
-  border: none;
+
+.category-css {
+}
+/* Định dạng cho các dropdown (Danh mục và Khoảng giá) */
+.dropdown select {
+  /* width: 150px; */
+  height: 40px;
   border-radius: 10px;
-  background-color: #d5d5d5;
+  border: 1px solid #ccc;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-top: 5px;
 }
+
+/* Định dạng cho input tìm kiếm */
+.sb-input {
+  width: 100%;
+  height: 50px;
+  border: none;
+  border-radius: 20px;
+  padding-left: 20px;
+  background-color: #f0f0f0;
+  flex: 1;
+}
+
+.sb-input:focus {
+  border: 2px solid #007bff; /* Viền xanh khi focus vào ô tìm kiếm */
+  outline: none; /* Loại bỏ outline mặc định */
+}
+
+.clear-btn:hover {
+  width: 60px;
+  border-radius: 50%;
+  animation: 0.5;
+}
+/* Nút tìm kiếm */
+.sb-button {
+  height: 50px;
+  aspect-ratio: 1/1;
+  border: none;
+  border-radius: 50%;
+  background-color: #007bff;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* Hiệu ứng hover cho nút tìm kiếm */
+.sb-button:hover {
+  background-color: red;
+}
+
 .header-search {
   display: flex;
   align-items: center;
@@ -231,6 +283,13 @@ header .row-flex {
   border: none;
   background-color: transparent;
   cursor: pointer;
+}
+
+.clear-btn {
+  width: 30px;
+  aspect-ratio: 1/1;
+  border: none;
+  border-radius: 15px;
 }
 .header-search i {
   position: absolute;
@@ -260,6 +319,50 @@ header .row-flex {
   text-align: center;
   font-size: 12px;
 }
+.header-account {
+  position: relative;
+  cursor: pointer;
+}
+
+.header-account i {
+  font-size: 24px;
+  color: #333;
+}
+
+.header-account .account-menu {
+  position: absolute;
+  top: 100%; /* Vị trí ngay dưới biểu tượng */
+  left: 50%; /* Canh giữa theo chiều ngang */
+  transform: translateX(-50%); /* Đẩy về giữa */
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  list-style: none;
+  padding: 10px 0;
+  width: 150px;
+  display: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+.header-account .account-menu li {
+  padding: 10px 15px;
+  font-size: 14px;
+}
+
+.header-account .account-menu li a {
+  text-decoration: none;
+  color: black;
+}
+
+.header-account .account-menu li:hover {
+  background-color: #f0f0f0;
+}
+
+.header-account:hover .account-menu {
+  display: block;
+}
+
 /* -----------SLIDER----------- */
 .slider {
   width: 100%;
@@ -445,6 +548,100 @@ footer .row-grid {
   line-height: 32px;
   margin-top: 10px;
 }
+/* Thông báo yêu cầu đăng nhập */
+/* Modal background */
+/* Modal background */
+.login-warning-modal {
+  display: none; /* Ẩn modal mặc định */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Màu nền mờ */
+  z-index: 9999; /* Đảm bảo modal nằm trên tất cả phần tử khác */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Nội dung modal */
+.modal-content {
+  position: relative;
+  background-color: white;
+  padding: 40px; /* Thêm khoảng cách bên trong */
+  border-radius: 10px;
+  width: 400px; /* Đặt chiều rộng modal */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 200px; /* Đặt chiều cao của modal */
+}
+
+/* Text trong modal */
+.modal-text {
+  font-size: 18px;
+  margin-bottom: 20px; /* Khoảng cách giữa text và nút */
+}
+
+/* Nút OK */
+/* Nút OK */
+.ok-btn {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100px;
+  margin-top: 10px;
+  transition: background-color 0.3s, transform 0.3s; /* Thêm hiệu ứng chuyển động */
+}
+
+/* Hiệu ứng hover cho nút OK */
+.ok-btn:hover {
+  background-color: #45a049; /* Màu nền khi hover */
+  transform: scale(1.05); /* Phóng to một chút */
+}
+
+/* Nút đóng */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #aaa;
+  cursor: pointer;
+  z-index: 10000;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+  color: black;
+}
+
+/* Responsive */
+@media screen and (max-width: 600px) {
+  .modal-content {
+    padding: 20px;
+    width: 80%;
+    height: 180px; /* Giảm chiều cao trên màn hình nhỏ */
+  }
+
+  .close-btn {
+    font-size: 20px;
+  }
+
+  .ok-btn {
+    font-size: 14px;
+    width: 80px;
+  }
+}
+
 /* -----------------PRODUCT-DETAIL------------- */
 .row-flex-product-detail {
   display: flex;
@@ -496,8 +693,9 @@ footer .row-grid {
 .product-image-main {
   width: 100%;
   aspect-ratio: 4/3;
-  object-fit: contain;
+  object-fit: cover;
 }
+
 .product-image-items img {
   width: 70px;
   height: 70px;
@@ -708,6 +906,70 @@ td {
   cursor: pointer;
   transition: var(--main-transition);
 }
+/* phân trang */
+/* Container cho thanh phân trang */
+.share-pg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+  background-color: #f5f5f5;
+  border-radius: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Nút phân trang */
+.share-pg-mini {
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  border: 1px solid var(--main-backgorund);
+  border-radius: 50%;
+  font-size: 18px;
+  color: var(--main-backgorund);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: bold;
+}
+
+/* Nút phân trang khi active hoặc hover */
+.share-pg-mini.active,
+.share-pg-mini:hover {
+  background-color: #a9a9a9;
+  color: #fff;
+  border-color: #a9a9a9;
+}
+
+/* Nút phân trang khi đang là trang hiện tại */
+.share-pg-mini.active {
+  background-color: #a9a9a9;
+  color: #fff;
+  font-weight: bold;
+}
+
+/* Nút phân trang không active */
+.share-pg-mini:not(.active) {
+  background-color: #fff;
+  color: #a9a9a9;
+}
+
+/* Nút cho các mũi tên */
+.share-pg-mini:first-child,
+.share-pg-mini:last-child {
+  width: 50px; /* Nút mũi tên rộng hơn một chút */
+}
+
+/* Nút phân trang khi hover */
+.share-pg-mini:hover {
+  background-color: #a9a9a9;
+  color: white;
+  border-color: #a9a9a9;
+}
+
 /* responsion */
 @media screen and (max-width: 1200px) {
   .hot-product-container {
@@ -779,7 +1041,6 @@ td {
     font-size: 20px;
     cursor: pointer;
   }
-
   /* responsive hot product*/
   .hot-product {
     padding-top: 200px;
@@ -806,5 +1067,278 @@ td {
   .cart .row-grid {
     grid-template-columns: 100%;
     row-gap: 20px;
+  }
+}
+
+/* Nền mờ cho body-signup */
+.body-signup {
+  width: 100%; /* Chiếm toàn bộ chiều rộng màn hình */
+  height: 100%; /* Chiếm toàn bộ chiều cao màn hình */
+  background-color: rgba(0, 0, 0, 0.2); /* Nền màu đen mờ */
+  position: fixed; /* Giữ cố định trên màn hình */
+  top: 0;
+  left: 0;
+  z-index: 1000; /* Đảm bảo phần này nằm trên các phần tử khác */
+  display: flex;
+  justify-content: center; /* Canh giữa theo chiều ngang */
+  align-items: center; /* Canh giữa theo chiều dọc */
+  padding-top: 60px; /* Chừa khoảng trống cho header nếu cần */
+}
+
+/* Wrapper cho form đăng ký */
+.form-wrapper {
+  width: 45%;
+  position: relative;
+  background-color: white;
+  padding: 10px; /* Khoảng cách giữa form và các góc */
+  border-radius: 15px; /* Bo tròn cho tất cả các góc */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ */
+  z-index: 1010;
+}
+/* Tùy chỉnh thanh cuộn */
+/* Định dạng cho form đăng ký (bbd-signup) */
+.body-signup .bbd-signup {
+  background-color: white; /* Nền trắng cho form */
+  padding: 20px 10px 20px; /* Khoảng cách trong form */
+  border-radius: 10px; /* Bo tròn các góc form */
+  max-width: 500px; /* Chiều rộng tối đa của form */
+  width: 90%; /* Đảm bảo form không quá rộng */
+  position: relative; /* Để nút đóng có thể đặt absolute trong form */
+  /* max-height: 80vh; Đảm bảo form không quá cao */
+  z-index: 1010;
+}
+
+/* Nút đóng tròn ở góc trên bên phải */
+/* .close-btn {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  width: 30px;
+  height: 30px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 18px;
+  z-index: 10;
+} */
+
+/* Phần header của form đăng ký */
+.sign-up-header {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Cấu trúc form đăng ký */
+.sign-up-form {
+  padding: 7px 0 30px 0;
+}
+
+.sign-up-form .input-box {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+/* Kiểm tra lỗi cho các trường nhập liệu */
+.input-box.invalid .form-control {
+  border: 1px solid #f33a58;
+}
+
+.input-box.invalid .invalid-message {
+  text-align: left;
+  font-size: 15px;
+  line-height: 1.6rem;
+  padding: 4px 0 0;
+  color: #f33a58;
+}
+
+/* Kiểu cho các input trong form */
+.sign-up-form .input-box input {
+  padding-left: 20px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  width: 100%;
+  height: 45px;
+}
+
+.sign-up-form .sign-up-button {
+  border: none;
+  background-color: #bc0517;
+  color: white;
+  width: 110px;
+  height: 40px;
+  border-radius: 5px;
+  transform: all 0.5s;
+  font-size: 15px;
+  margin-top: 5px;
+}
+
+/* Hiệu ứng hover cho nút đăng ký */
+.sign-up-button:hover {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+/* CSS cho phần tử cuộn trong form */
+.sign-up-form .input-box input:focus {
+  outline: none;
+  border-color: #bc0517;
+}
+
+/* Tạo hiệu ứng cho trường hợp lỗi nhập liệu */
+.input-box.invalid .invalid-message {
+  color: #f33a58;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+/* Phần footer của form đăng ký */
+.sign-up-form p {
+  text-align: center;
+  font-size: 16px;
+  margin-top: 15px;
+}
+
+/* CSS cho nút đóng trong form */
+/* Nút đóng tròn ở góc trên bên phải, nằm ngoài viền bo tròn */
+.close-btn {
+  position: absolute;
+  top: -10px; /* Di chuyển lên trên một chút */
+  right: -10px; /* Di chuyển ra ngoài bên phải một chút */
+  width: 40px;
+  height: 40px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 20px;
+  z-index: 1015; /* Đảm bảo nút đóng luôn nằm trên các phần tử khác */
+}
+
+/* Điều chỉnh lại kích thước icon bên trong nút đóng */
+.close-btn i {
+  font-size: 22px;
+}
+.submit-button {
+  width: 130px;
+  height: 45px;
+  background-color: #bc0516;
+  color: white;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.submit-button:hover {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  cursor: pointer;
+}
+.sign-in-js:hover {
+  cursor: pointer;
+}
+.register-js:hover {
+  cursor: pointer;
+}
+.show-btn {
+  position: absolute;
+  right: 15px;
+
+  /* transform: translateY(-50%); */
+  font-size: 20px;
+  cursor: pointer;
+  /* display: none; */
+}
+/* .forget-submit {
+  width: 180px;
+  height: 45px;
+  background-color: #bc0516;
+  color: white;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+} */
+@media (max-width: 768px) {
+  body {
+    padding: 0;
+  }
+
+  .body-signup {
+    top: 50%;
+    padding: 0;
+    width: 100%;
+  }
+
+  .header-bar-icon,
+  .header-logo,
+  .header-nav {
+    padding: 0;
+  }
+}
+/* Khung chứa toàn bộ các phần tử tìm kiếm */
+
+/* Media Query cho màn hình nhỏ (điện thoại di động) */
+@media (max-width: 768px) {
+  .search-box {
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 10px;
+  }
+
+  .search-container {
+    flex-direction: column; /* Xếp các phần tử theo chiều dọc */
+    gap: 10px; /* Khoảng cách nhỏ hơn giữa các phần tử */
+  }
+
+  .dropdown select {
+    width: 100%; /* Chiều rộng 100% để dropdown chiếm toàn bộ chiều rộng */
+  }
+
+  .sb-input {
+    width: 100%; /* Chiều rộng 100% để input chiếm toàn bộ chiều rộng */
+  }
+
+  .sb-button {
+    width: 100%; /* Nút tìm kiếm chiếm toàn bộ chiều rộng */
+    height: 45px; /* Giảm chiều cao nút để phù hợp với diện tích nhỏ */
+    border-radius: 5px;
+  }
+}
+
+/* Media Query cho màn hình cực nhỏ (điện thoại nhỏ) */
+@media (max-width: 480px) {
+  .search-box {
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 10px;
+  }
+
+  .search-container {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .dropdown select {
+    width: 100%; /* Chiều rộng 100% cho dropdown */
+  }
+
+  .sb-input {
+    width: 100%; /* Input chiếm toàn bộ chiều rộng */
+  }
+
+  .sb-button {
+    width: 100%; /* Nút tìm kiếm chiếm toàn bộ chiều rộng */
+    height: 40px; /* Giảm chiều cao nút trên màn hình nhỏ */
   }
 }
