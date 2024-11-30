@@ -25,7 +25,7 @@ userPic.addEventListener('click', ()=>{
 
 // Order List
 let orderList = [{
-    orderId: '912873',
+    orderId: 'DH912873',
     orderUser: 'hello23hihi',
     orderTotal: '1280000',
     orderDate: '10/10/2024',
@@ -33,7 +33,7 @@ let orderList = [{
     orderStatus: 'Thành công',
     classStatus: 'delivered'
 },{
-    orderId: '882948',
+    orderId: 'DH882948',
     orderUser: 'alice_wang',
     orderTotal: '1000000',
     orderDate: '12/1/2024',
@@ -41,15 +41,15 @@ let orderList = [{
     orderStatus: 'Chưa xử lý',
     classStatus: 'pending'
 },{
-    orderId: '234738',
+    orderId: 'DH234738',
     orderUser: 'bob_smith',
     orderTotal: '450000',
     orderDate: '11/25/2024',
-    orderAddress: '9',
+    orderAddress: '3',
     orderStatus: 'Đang giao hàng',
     classStatus: 'inprogress'
 },{
-    orderId: '723791',
+    orderId: 'DH723791',
     orderUser: 'carol_jones',
     orderTotal: '600000',
     orderDate: '11/21/2024',
@@ -57,7 +57,7 @@ let orderList = [{
     orderStatus: 'Đã hủy',
     classStatus: 'return'
 },{
-    orderId: '123929',
+    orderId: 'DH123929',
     orderUser: 'david_lee',
     orderTotal: '200000',
     orderDate: '11/22/2024',
@@ -65,7 +65,7 @@ let orderList = [{
     orderStatus: 'Thành công',
     classStatus: 'delivered'
 },{
-    orderId: '643823',
+    orderId: 'DH643823',
     orderUser: 'emma_clark',
     orderTotal: '500000',
     orderDate: '12/3/2024',
@@ -73,7 +73,7 @@ let orderList = [{
     orderStatus: 'Đang giao hàng',
     classStatus: 'inprogress'
 },{
-    orderId: '239493',
+    orderId: 'DH239493',
     orderUser: 'frank_harris',
     orderTotal: '350000',
     orderDate: '11/30/2024',
@@ -81,15 +81,15 @@ let orderList = [{
     orderStatus: 'Chưa xử lý',
     classStatus: 'pending'
 },{
-    orderId: '873827',
+    orderId: 'DH873827',
     orderUser: 'grace_martin',
     orderTotal: '700000',
     orderDate: '10/14/2024',
-    orderAddress: '11',
+    orderAddress: '7',
     orderStatus: 'Đã hủy',
     classStatus: 'return'
 },{
-    orderId: '299310',
+    orderId: 'DH299310',
     orderUser: 'henry_wilson',
     orderTotal: '300000',
     orderDate: '11/23/2024',
@@ -97,7 +97,7 @@ let orderList = [{
     orderStatus: 'Thành công',
     classStatus: 'delivered'
 },{
-    orderId: '829123',
+    orderId: 'DH829123',
     orderUser: 'isabella_thompson',
     orderTotal: '550000',
     orderDate: '11/21/2024',

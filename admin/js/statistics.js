@@ -24,7 +24,7 @@ userPic.addEventListener('click', ()=>{
 });
 
 // Statistic products
-const products = [{
+let products = [{
     productId: '789456',
     productName: 'Áo phao nhẹ',
     productImage: './img/ao-phao-nhe.webp',
@@ -96,15 +96,15 @@ function renderProduct(){
             <td><img class="product-img" src="${productImage}" alt=""></td>
             <td>${productAmount}</td>
             <td>${sum}</td>
-            <td><button class="product-detail"><i class="fas fa-eye"></i></button></td>
         </tr>`;
         totalPrice += sum;
+        // <td><button class="product-detail"><i class="fas fa-eye"></i></button></td>
     }
     document.querySelector('.product-list').innerHTML = tableHTML;
 
     total += 
     `<tr>
-        <td colspan="5">Tổng doanh thu trên các mặt hàng:</td>
+        <td colspan="4">Tổng doanh thu trên các mặt hàng:</td>
         <td>${totalPrice}</td>
     </tr>`;
     document.querySelector('.total-price').innerHTML = total;
@@ -148,49 +148,49 @@ option.addEventListener('change', ()=>{
 });
 
 // Statistic Customers
-const customers = [{
+let customers = [{
     orderUsername: 'hello23hihi',
-    orderId: '728347',
+    orderId: 'DH728347',
     orderDate: '11/10/2024',
     orderTotal: 1300000
 },{
     orderUsername: 'alice_wang',
-    orderId: '634281',
+    orderId: 'DH634281',
     orderDate: '12/1/2024',
     orderTotal: 850000
 },{
     orderUsername: 'carol_jones',
-    orderId: '237848',
+    orderId: 'DH237848',
     orderDate: '12/20/2024',
     orderTotal: 2000000
 },{
     orderUsername: 'bob_smith',
-    orderId: '127387',
+    orderId: 'DH127387',
     orderDate: '12/2/2024',
     orderTotal: 4200000
 },{
     orderUsername: 'hello23hihi',
-    orderId: '538829',
+    orderId: 'DH538829',
     orderDate: '11/12/2024',
     orderTotal: 380000
 },{
     orderUsername: 'frank_harris',
-    orderId: '823273',
+    orderId: 'DH823273',
     orderDate: '12/6/2024',
     orderTotal: 730000
 },{
     orderUsername: 'henry_wilson',
-    orderId: '287375',
+    orderId: 'DH287375',
     orderDate: '12/10/2024',
     orderTotal: 550000
 },{
     orderUsername: 'david_lee',
-    orderId: '587831',
+    orderId: 'DH587831',
     orderDate: '11/1/2024',
     orderTotal: 660000
 },{
     orderUsername: 'alice_wang',
-    orderId: '938724',
+    orderId: 'DH938724',
     orderDate: '11/24/2024',
     orderTotal: 430000
 }]; 

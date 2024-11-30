@@ -335,7 +335,9 @@ body{
 .products table thead td:last-child,
 .products table tbody td:last-child,
 .products table thead td:nth-child(4),
-.products table tbody td:nth-child(4){
+.products table tbody td:nth-child(4),
+.products table thead td:nth-child(5),
+.products table tbody td:nth-child(5){
     text-align: center;
 }
 .products table tfoot tr{

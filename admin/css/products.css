@@ -152,7 +152,7 @@ body{
 /* Sub Menu */
 .sub-menu-wrap{
     position: absolute;
-    top: 4%;
+    top: 6%;
     right: 0%;
     width: 280px;
     max-height: 0px;

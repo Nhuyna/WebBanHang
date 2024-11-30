@@ -27,74 +27,74 @@ userPic.addEventListener('click', ()=>{
 
 let products = localStorage.getItem('products') ? JSON.parse(localStorage.getItem('products')) :
 [{
-    productId: '672831',
+    productId: 'SP672831',
     productName: 'Áo thun Marvel',
     productImage: './img/2484.ULSMV.TSZ705__CLASSICVENOM_1_DEN.png',
     productCount: '384',
     productPrice: '220000',
     productStatus: 'true'
 },{
-    productId: '823874',
+    productId: 'SP823874',
     productName: 'Áo thun Venom',
     productImage: './img/2484.ULSMV.TSZ707_HEHEHEVENOM_0050__20_DEN.webp',
     productCount: '672',
     productPrice: '190000'
 },{
-    productId: '172392',
+    productId: 'SP172392',
     productName: 'Áo khoác thể thao có mũ',
     productImage: './img/ao-khoac-the-thao-co-mu.webp',
     productCount: '583',
     productPrice: '350000'
 },{
-    productId: '283499',
+    productId: 'SP283499',
     productName: 'Áo khoác thể thao cổ Rib',
     productImage: './img/ao-khoac-the-thao-co-rib.webp',
     productCount: '826',
     productPrice: '400000'
 },{
-    productId: '789456',
+    productId: 'SP789456',
     productName: 'Áo phao nhẹ',
     productImage: './img/ao-phao-nhe.webp',
     productCount: '429',
     productPrice: '380000'
 },{
-    productId: '492748',
+    productId: 'SP492748',
     productName: 'Áo sơ mi cổ tàu',
     productImage: './img/ao-so-mi-co-tau.webp',
     productCount: '732',
     productPrice: '430000'
 },{
-    productId: '237891',
+    productId: 'SP237891',
     productName: 'Áo sơ mi Modal Essential',
     productImage: './img/ao-so-mi-modal-essential.webp',
     productCount: '662',
     productPrice: '500000'
 },{
-    productId: '628435',
+    productId: 'SP628435',
     productName: 'Áo sơ mi Oxford Premium',
     productImage: './img/ao-so-mi-oxford.webp',
     productCount: '348',
     productPrice: '380000'
 },{
-    productId: '827348',
+    productId: 'SP827348',
     productName: 'Áo Sweater',
     productImage: './img/ao-sweater.webp',
     productCount: '723',
     productPrice: '250000'
 },{
-    productId: '827348',
+    productId: 'SP827348',
     productName: 'Áo Sweater',
     productImage: './img/ao-sweater.webp',
     productCount: '723',
     productPrice: '250000'
 },{
-    productId: '827348',
+    productId: 'SP827348',
     productName: 'Áo Sweater',
     productImage: './img/ao-sweater.webp',
     productCount: '723',
     productPrice: '250000'
 },{
-    productId: '827348',
+    productId: 'SP827348',
     productName: 'Áo Sweater',
     productImage: './img/ao-sweater.webp',
     productCount: '723',
@@ -145,7 +145,7 @@ function renderTable(){
 
 // Pagination
 let thisPage = 1;
-let limit = 5;
+let limit = 4;
 let list = document.querySelectorAll('.products-list tr');
 
 function loadItem(){
