@@ -1,3 +1,9 @@
+// Check if Loginned
+let isLogin = JSON.parse(localStorage.getItem('isLogin'));
+if(isLogin == false){
+    window.location.href = "login.html";
+}
+
 // Menu Bar
 const menu = document.querySelector('.toggle')
 .addEventListener('click', ()=>{toggleMenu()})
@@ -10,8 +16,16 @@ function toggleMenu(){
     main.classList.toggle('active');
 }
 
+// Admin info
+const subMenu = document.querySelector('.sub-menu-wrap');
+const userPic = document.querySelector('.user-pic');
+userPic.addEventListener('click', ()=>{
+    subMenu.classList.toggle('open-menu');
+});
+
 // List Khách Hàng
-let userList = [{
+let userList = localStorage.getItem('userList') ? JSON.parse(localStorage.getItem('userList')) :
+[{
     username: 'hello89hihi',
     email: 'abcd55@gmail.com',
     phone: '0859869534'
@@ -51,7 +65,48 @@ let userList = [{
     username: 'isabella_thompson',
     email: 'isabella.thompson@example.com',
     phone: '0909234567'
+},{
+    username: 'james_johnson',
+    email: 'james.johnson@example.com',
+    phone: '0385947836'
+},{
+    username: 'katherine_king',
+    email: 'katherine.king@example.com',
+    phone: '0758939482'
+},{
+    username: 'liam_lewis',
+    email: 'liam.lewis@example.com',
+    phone: '0128378293'
+},{
+    username: 'madison_miller',
+    email: 'madison.miller@example.com',
+    phone: '0812839034'
+},{
+    username: 'noah_nelson',
+    email: 'noah.nelson@example.com',
+    phone: '0823484737'
+},{
+    username: 'olivia_ben',
+    email: 'olivia.ben@example.com',
+    phone: '0928349873'
+},{
+    username: 'patrick_parker',
+    email: 'patrick.parker@example.com',
+    phone: '0872189234'
+},{
+    username: 'quinn_hally',
+    email: 'quinn.hally@example.com',
+    phone: '0781238924'
+},{
+    username: 'rachel_roberts',
+    email: 'rachel.roberts@example.com',
+    phone: '0890223456'
+},{
+    username: 'samuel_smith',
+    email: 'samuel.smith@example.com',
+    phone: '0909274673'
 }];
+
 const delete_popup = document.querySelector('.delete-popup');
 const popup_close_btn = document.querySelector('.popup-close-btn'); 
 const popup_cancel_btn = document.querySelector('.popup-cancel-btn'); 
@@ -66,7 +121,7 @@ function renderTable(){
     let tableHTML = '';
     for(let i=0; i<userList.length; i++){
         const {username, email, phone} = userList[i];
-        const html = 
+        tableHTML += 
         `<tr>
             <td>${username}</td>
             <td>${email}</td>
@@ -79,12 +134,11 @@ function renderTable(){
                 </div>
             </td>
         </tr>`;
-        tableHTML += html;
     }
     document.querySelector('.js-user-table').innerHTML = tableHTML;
 
     // Delete PopUp
-    document.querySelectorAll('.delete-btn').forEach((deleteButton, index) => {
+    document.querySelectorAll('.delete-btn').forEach((deleteButton) => {
         deleteButton.addEventListener('click', ()=>{
             delete_popup.classList.add('active');
             const popup_confirm_btn = document.querySelector('.popup-confirm-btn');
@@ -147,6 +201,53 @@ function renderTable(){
     });
 }
 
+// Pagination
+let thisPage = 1;
+let limit = 7;
+let list = document.querySelectorAll('.js-user-table tr');
+
+function loadItem(){
+    let beginGet = limit * (thisPage - 1);
+    let endGet = limit * thisPage - 1;
+    list.forEach((item, key)=>{
+        if(key >= beginGet && key <= endGet){
+            item.style.display = '';
+        }else{
+            item.style.display = 'none';
+        }
+    });
+    listPage();
+}
+loadItem();
+function listPage(){
+    let count = Math.ceil(list.length/limit);
+    document.querySelector('.listPage').innerHTML = '';
+    if(thisPage != 1){
+        let prev = document.createElement('li');
+        prev.innerText = 'PREV';
+        prev.setAttribute('onclick', "changePage(" + (thisPage - 1) + ")");
+        document.querySelector('.listPage').appendChild(prev);
+    }
+    for(let i=1; i<= count; i++){
+        let newPage = document.createElement('li');
+        newPage.innerText = i;
+        if(i == thisPage){
+            newPage.classList.add('active');
+        }
+        newPage.setAttribute('onclick', "changePage(" + i + ")");
+        document.querySelector('.listPage').appendChild(newPage);
+    }
+    if(thisPage != count){
+        let next = document.createElement('li');
+        next.innerText = 'NEXT';
+        next.setAttribute('onclick', "changePage(" + (thisPage + 1) + ")");
+        document.querySelector('.listPage').appendChild(next);
+    }
+}
+function changePage(i){
+    thisPage = i;
+    loadItem();
+}
 
 // Add User PopUp
 const add_user = document.querySelector('.add-user');
@@ -180,6 +281,7 @@ function addUser(){
     if(name != '' && email != '' && phone != ''){
         userList.push({username: name, email: email, phone: phone});     
     }
+    localStorage.setItem('userList', JSON.stringify(userList));
     nameInput.value = '';
     emailInput.value = '';
     phoneInput.value = '';

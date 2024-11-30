@@ -13,13 +13,13 @@
         <div class="navigation">
             <ul>
                 <li>
-                    <a href="./admin.html">
+                    <a href="./index.html">
                         <span class="icon"></span>
                         <span class="title"><h1>COOLMATE</h1></span>
                     </a>
                 </li>
                 <li>
-                    <a href="./admin.html">
+                    <a href="./index.html">
                         <span class="icon"><i class="fas fa-home"></i></span>
                         <span class="title">Tổng Quan</span>
                     </a>
@@ -49,13 +49,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="./setting.html">
-                        <span class="icon"><i class="fas fa-cog"></i></span>
-                        <span class="title">Cài Đặt</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="./index.html">
+                    <a href="./login.html">
                         <span class="icon"><i class="fas fa-sign-out-alt"></i></span>
                         <span class="title">Đăng Xuất</span>
                     </a>
@@ -76,7 +70,7 @@
                     </label>
                 </div>
                 <div class="user">
-                    <a href="./setting.html"><img src="./img/user.jpg"></a>
+                    <a href="#"><img src="./img/user.jpg" class="user-pic"></a>
                 </div>
             </div>
             
@@ -91,8 +85,8 @@
                                 <p>Lọc theo:</p>
                                 <select name="" id="statistic-option">
                                     <option value="Tất cả">Tất cả</option>
-                                    <option value="Mặt hàng">Mặt hàng</option>
                                     <option value="Khách hàng">Khách hàng</option>
+                                    <option value="Mặt hàng">Mặt hàng</option>
                                 </select>
                             </div>
                             <div class="search-box">
@@ -103,7 +97,79 @@
                         </div>
                     </div>
                     <div class="statistic-body">
+                        <div class="customers">
+                            <div class="customer-header">
+                                <h4>Thống kê khách hàng</h4>
+                            </div>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <td>Tên Khách Hàng</td>
+                                        <td>Mã Đơn Hàng</td>
+                                        <td>Ngày Đặt Hàng</td>
+                                        <td>Tổng Đơn Hàng</td>
+                                        <td>Chi Tiết</td>
+                                    </tr>
+                                </thead>
+                                <tbody class="customer-list">
+                                </tbody>
+                            </table>
+                        </div>
                         <div class="products">
+                            <div class="chart-container">
+                                <div class="chart-header">
+                                    <h2>BIỂU ĐỒ THỐNG KÊ THEO MÃ SẢN PHẨM</h2>
+                                </div>
+                                <div class="chart-body">
+                                    <div class="chart-serie" style="--i:23.11%;
+                                        --color:#9142df">
+                                        <h3 class="chart-title">23.11%</h3>
+                                    </div>
+                                    <div class="chart-serie" style="--i:17.92%;
+                                        --color:#9142df">
+                                        <h3 class="chart-title">17.92%</h3>
+                                    </div>
+                                    <div class="chart-serie" style="--i:16.98%;
+                                        --color:#9142df">
+                                        <h3 class="chart-title">16.98%</h3>
+                                    </div>
+                                    <div class="chart-serie" style="--i:14.15%;
+                                        --color:#9142df">
+                                        <h3 class="chart-title">14.15%</h3>
+                                    </div>
+                                    <div class="chart-serie" style="--i:9.43%;
+                                        --color:#9142df">
+                                        <h3 class="chart-title">9.43%</h3>
+                                    </div>
+                                    <div class="chart-serie" style="--i:7.55%;
+                                        --color:#9142df">
+                                        <h3 class="chart-title">7.55%</h3>
+                                    </div>
+                                    <div class="chart-serie" style="--i:4.72%;
+                                        --color:#9142df">
+                                        <h3 class="chart-title">4.72%</h3>
+                                    </div>
+                                    <div class="chart-serie" style="--i:3.3%;
+                                        --color:#9142df">
+                                        <h3 class="chart-title">3.3%</h3>
+                                    </div>
+                                    <div class="chart-serie" style="--i:2.83%;
+                                        --color:#9142df">
+                                        <h3 class="chart-title">2.83%</h3>
+                                    </div>
+                                </div>
+                                <ul class="list-bars-name">
+                                    <li><p>237891</p></li>
+                                    <li><p>827348</p></li>
+                                    <li><p>628435</p></li>
+                                    <li><p>283499</p></li>
+                                    <li><p>172392</p></li>
+                                    <li><p>672831</p></li>
+                                    <li><p>789456</p></li>
+                                    <li><p>492748</p></li>
+                                    <li><p>823874</p></li>
+                                </ul>
+                            </div>
                             <div class="product-header">
                                 <h4>Thống kê mặt hàng</h4>
                             </div>
@@ -115,7 +181,9 @@
                                         <td>Hình Ảnh</td>
                                         <td>Số Lượng bán ra</td>
                                         <td>Tổng doanh thu</td>
+                                        <td>Chi Tiết</td>
                                     </tr>
+                                    <img src="" alt="">
                                 </thead>
                                 <tbody class="product-list">
 
@@ -125,29 +193,106 @@
                                 </tfoot>
                             </table>
                         </div>
-                        <div class="customers">
-                            <div class="customer-header">
-                                <h4>Thống kê khách hàng</h4>
-                            </div>
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <td>Mã Sản Phẩm</td>
-                                        <td>Tên Sản Phẩm</td>
-                                        <td>Hình Ảnh</td>
-                                        <td>Số Lượng bán ra</td>
-                                        <td>Tổng doanh thu</td>
-                                    </tr>
-                                </thead>
-                                <tbody>
+                    </div>
+                </div>
+            </div>
 
-                                </tbody>
-                                <tfoot>
-
-                                </tfoot>
-                            </table>
+            <div class="sub-menu-wrap">
+                <div class="sub-menu">
+                    <div class="user-info">
+                        <img src="./img/user.jpg" alt="">
+                        <div>
+                            <h2>AdminSuper</h2>
                         </div>
                     </div>
+                    <hr>
+                    <p>Admin trang web CoolMate</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="order-popup">
+        <div class="bg-shadow"></div>
+        <div class="order-details">
+            <button class="close-btn"><i class="fas fa-times"></i></button>
+            <div class="order-header">
+                <img class="logo-image" src="./img/logo.png" alt="">
+                <div  class="order-id">
+                    <p>Đơn hàng</p>
+                    <p>#728347</p>
+                </div>
+            </div>
+            <div class="order-body">
+                <div class="user-info">
+                    <div>
+                        <p>Gửi đến:</p>
+                        <p>Nguyễn Văn A</p>
+                        <p>0956958693</p>
+                        <p>365 Hoàng Văn Thụ, Quận 8, TPHCM</p>
+                    </div>
+                    <div>
+                        <p>Gửi từ:</p>
+                        <p>CoolMate Team</p>
+                        <p>0398755742</p>
+                        <p>165 Trần Trọng Cung, Quận 7, TPHCM</p>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <table>
+                        <thead>
+                            <tr>
+                                <td>Tên Sản Phẩm</td>
+                                <td>Đơn Giá</td>
+                                <td>Số Lượng</td>
+                                <td>Tổng(VND)</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Áo Thun</td>
+                                <td>200000</td>
+                                <td>2</td>
+                                <td>400000</td>
+                            </tr>
+                            <tr>
+                                <td>Áo Sơ Mi</td>
+                                <td>150000</td>
+                                <td>1</td>
+                                <td>150000</td>
+                            </tr>
+                            <tr>
+                                <td>Áo Polo</td>
+                                <td>200000</td>
+                                <td>2</td>
+                                <td>400000</td>
+                            </tr>
+                            <tr>
+                                <td>Áo Sơ Mi</td>
+                                <td>300000</td>
+                                <td>1</td>
+                                <td>300000</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="price">
+                    <div class="summary">
+                        <div class="sum-title">
+                            <p>Giá sản phẩm:</p>
+                            <p>Phí vận chuyển:</p>
+                            <p>Tổng hóa đơn:</p>
+                        </div>
+                        <div class="total-price">
+                            <p>1250000</p>
+                            <p>30000</p>
+                            <p>1280000</p>
+                        </div>
+                    </div>
+                </div>
+            <div class="order-foot">
+                <div class="note">
+                    <p><span>Ghi chú: </span>Giao nhanh lên nhé. Em đang cần gấp!!!!!</p>
                 </div>
             </div>
         </div>

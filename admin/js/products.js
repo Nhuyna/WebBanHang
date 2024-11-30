@@ -1,3 +1,9 @@
+// Check if Loginned
+let isLogin = JSON.parse(localStorage.getItem('isLogin'));
+if(isLogin == false){
+    window.location.href = "login.html";
+}
+
 // Menu Bar
 const menu = document.querySelector('.toggle')
 .addEventListener('click', ()=>{toggleMenu()})
@@ -10,38 +16,91 @@ function toggleMenu(){
     main.classList.toggle('active');
 }
 
+// Admin info
+const subMenu = document.querySelector('.sub-menu-wrap');
+const userPic = document.querySelector('.user-pic');
+userPic.addEventListener('click', ()=>{
+    subMenu.classList.toggle('open-menu');
+});
+
 // Products
-let products = [{
-    productId: '789456',
-    productName: 'Áo thun',
+
+let products = localStorage.getItem('products') ? JSON.parse(localStorage.getItem('products')) :
+[{
+    productId: '672831',
+    productName: 'Áo thun Marvel',
     productImage: './img/2484.ULSMV.TSZ705__CLASSICVENOM_1_DEN.png',
-    productCount: '50',
-    productPrice: '200000'
+    productCount: '384',
+    productPrice: '220000',
+    productStatus: 'true'
+},{
+    productId: '823874',
+    productName: 'Áo thun Venom',
+    productImage: './img/2484.ULSMV.TSZ707_HEHEHEVENOM_0050__20_DEN.webp',
+    productCount: '672',
+    productPrice: '190000'
+},{
+    productId: '172392',
+    productName: 'Áo khoác thể thao có mũ',
+    productImage: './img/ao-khoac-the-thao-co-mu.webp',
+    productCount: '583',
+    productPrice: '350000'
+},{
+    productId: '283499',
+    productName: 'Áo khoác thể thao cổ Rib',
+    productImage: './img/ao-khoac-the-thao-co-rib.webp',
+    productCount: '826',
+    productPrice: '400000'
 },{
     productId: '789456',
-    productName: 'Áo thun',
-    productImage: './img/2484.ULSMV.TSZ705__CLASSICVENOM_1_DEN.png',
-    productCount: '50',
-    productPrice: '200000'
+    productName: 'Áo phao nhẹ',
+    productImage: './img/ao-phao-nhe.webp',
+    productCount: '429',
+    productPrice: '380000'
 },{
-    productId: '789456',
-    productName: 'Áo thun',
-    productImage: './img/2484.ULSMV.TSZ705__CLASSICVENOM_1_DEN.png',
-    productCount: '50',
-    productPrice: '200000'
+    productId: '492748',
+    productName: 'Áo sơ mi cổ tàu',
+    productImage: './img/ao-so-mi-co-tau.webp',
+    productCount: '732',
+    productPrice: '430000'
 },{
-    productId: '789456',
-    productName: 'Áo thun',
-    productImage: './img/2484.ULSMV.TSZ705__CLASSICVENOM_1_DEN.png',
-    productCount: '50',
-    productPrice: '200000'
+    productId: '237891',
+    productName: 'Áo sơ mi Modal Essential',
+    productImage: './img/ao-so-mi-modal-essential.webp',
+    productCount: '662',
+    productPrice: '500000'
 },{
-    productId: '789456',
-    productName: 'Áo thun',
-    productImage: './img/2484.ULSMV.TSZ705__CLASSICVENOM_1_DEN.png',
-    productCount: '50',
-    productPrice: '200000'
+    productId: '628435',
+    productName: 'Áo sơ mi Oxford Premium',
+    productImage: './img/ao-so-mi-oxford.webp',
+    productCount: '348',
+    productPrice: '380000'
+},{
+    productId: '827348',
+    productName: 'Áo Sweater',
+    productImage: './img/ao-sweater.webp',
+    productCount: '723',
+    productPrice: '250000'
+},{
+    productId: '827348',
+    productName: 'Áo Sweater',
+    productImage: './img/ao-sweater.webp',
+    productCount: '723',
+    productPrice: '250000'
+},{
+    productId: '827348',
+    productName: 'Áo Sweater',
+    productImage: './img/ao-sweater.webp',
+    productCount: '723',
+    productPrice: '250000'
+},{
+    productId: '827348',
+    productName: 'Áo Sweater',
+    productImage: './img/ao-sweater.webp',
+    productCount: '723',
+    productPrice: '250000'
 }];
+// localStorage.setItem('products', JSON.stringify(products));
 const popup_close_btn = document.querySelector('.popup-close-btn'); 
 const popup_cancel_btn = document.querySelector('.popup-cancel-btn'); 
 const delete_popup = document.querySelector('.delete-popup');
@@ -84,6 +143,53 @@ function renderTable(){
     });
 }
 
+// Pagination
+let thisPage = 1;
+let limit = 5;
+let list = document.querySelectorAll('.products-list tr');
+
+function loadItem(){
+    let beginGet = limit * (thisPage - 1);
+    let endGet = limit * thisPage - 1;
+    list.forEach((item, key)=>{
+        if(key >= beginGet && key <= endGet){
+            item.style.display = '';
+        }else{
+            item.style.display = 'none';
+        }
+    });
+    listPage();
+}
+loadItem();
+function listPage(){
+    let count = Math.ceil(list.length/limit);
+    document.querySelector('.listPage').innerHTML = '';
+    if(thisPage != 1){
+        let prev = document.createElement('li');
+        prev.innerText = 'PREV';
+        prev.setAttribute('onclick', "changePage(" + (thisPage - 1) + ")");
+        document.querySelector('.listPage').appendChild(prev);
+    }
+    for(let i=1; i<= count; i++){
+        let newPage = document.createElement('li');
+        newPage.innerText = i;
+        if(i == thisPage){
+            newPage.classList.add('active');
+        }
+        newPage.setAttribute('onclick', "changePage(" + i + ")");
+        document.querySelector('.listPage').appendChild(newPage);
+    }
+    if(thisPage != count){
+        let next = document.createElement('li');
+        next.innerText = 'NEXT';
+        next.setAttribute('onclick', "changePage(" + (thisPage + 1) + ")");
+        document.querySelector('.listPage').appendChild(next);
+    }
+}
+function changePage(i){
+    thisPage = i;
+    loadItem();
+}
 
 // Add Product PopUp
 const add_product = document.querySelector('.add-product');
@@ -144,7 +250,7 @@ function addProduct(){
     if(id != '' && name != '' && count != '' && price != '' && img != ''){
         products.push({productId: id, productName: name, productImage: img, productCount: count, productPrice: price});
     }
-    console.log(products);
+    localStorage.setItem('products', JSON.stringify(products));
     idInput.value = '';
     nameInput.value = '';
     countInput.value = '';

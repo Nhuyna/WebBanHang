@@ -149,6 +149,41 @@ body{
     height: 100%;
     object-fit: cover;
 }
+/* Sub Menu */
+.sub-menu-wrap{
+    position: absolute;
+    top: 4%;
+    right: 0%;
+    width: 280px;
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 0.5s;
+}
+.sub-menu-wrap.open-menu{
+    max-height: 150px;
+}
+.sub-menu{
+    background: #003147;
+    color: #fff;
+    padding: 20px;
+    margin: 10px;
+}
+.user-info{
+    display: flex;
+    align-items: center;
+}
+.user-info img{
+    width: 60px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+.sub-menu hr{
+    border: 0;
+    height: 1px;
+    width: 100%;
+    background: #fff;
+    margin: 10px 0;
+}
 @media (max-width: 992px){
     .navigation{
         left: -300px;
@@ -260,6 +295,12 @@ body{
 .user-table .inside-table table tbody tr:last-child{
     border-bottom: none;
 }
+.user-table .inside-table table tbody td:nth-child(4),
+.user-table .inside-table table thead td:nth-child(4),
+.user-table .inside-table table tbody td:nth-child(5),
+.user-table .inside-table table thead td:nth-child(5){
+    text-align: center;
+}
 .tools{
     display: flex;
     gap: 15px;
@@ -277,6 +318,23 @@ body{
     background: #fff;
     border: none;
     cursor: pointer;
+}
+/* Pagination */
+.listPage{
+    padding: 10px;
+    text-align: center;
+    list-style: none;
+}
+.listPage li{
+    background-color: #ffffffBD;
+    padding: 10px 15px;
+    display: inline-block;
+    margin: 0 5px;
+    cursor: pointer;
+}
+.listPage .active{
+    background-color: #B192EF;
+    color: #fff;
 }
 .delete-popup{
     position: relative;
@@ -297,7 +355,7 @@ body{
     background: #fff;
     max-width: 30%;
     left: 50%;
-    transform: translate(-50%, 80%);
+    transform: translate(-50%, 100%);
     animation: modalShow 0.5s linear;
 }
 .delete-popup .popup .popup-head{
@@ -358,7 +416,7 @@ body{
     }
 
     to {
-        transform: translate(-50%, 80%);
+        transform: translate(-50%, 100%);
         opacity: 1;
     }
 }
@@ -383,7 +441,7 @@ body{
     width: 100%;
     left: 50%;
     padding: 25px;
-    transform: translate(-50%, 3%);
+    transform: translate(-50%, 10%);
     border-radius: 8px;
     animation: modalShow_addButton 0.5s linear;
 }
@@ -518,7 +576,7 @@ body{
     }
 
     to {
-        transform: translate(-50%, 3%);
+        transform: translate(-50%, 10%);
         opacity: 1;
     }
 }
@@ -556,7 +614,7 @@ body{
     width: 100%;
     left: 50%;
     padding: 25px;
-    transform: translate(-50%, 3%);
+    transform: translate(-50%, 10%);
     border-radius: 8px;
     animation: modalShow_addButton 0.5s linear;
 }

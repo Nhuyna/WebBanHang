@@ -13,13 +13,13 @@
         <div class="navigation">
             <ul>
                 <li>
-                    <a href="./admin.html">
+                    <a href="./index.html">
                         <span class="icon"></span>
                         <span class="title"><h1>COOLMATE</h1></span>
                     </a>
                 </li>
                 <li>
-                    <a href="./admin.html">
+                    <a href="./index.html">
                         <span class="icon"><i class="fas fa-home"></i></span>
                         <span class="title">Tổng Quan</span>
                     </a>
@@ -49,13 +49,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="./setting.html">
-                        <span class="icon"><i class="fas fa-cog"></i></span>
-                        <span class="title">Cài Đặt</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="./index.html">
+                    <a href="./login.html">
                         <span class="icon"><i class="fas fa-sign-out-alt"></i></span>
                         <span class="title">Đăng Xuất</span>
                     </a>
@@ -76,14 +70,14 @@
                     </label>
                 </div>
                 <div class="user">
-                    <a href="./setting.html"><img src="./img/user.jpg"></a>
+                    <a href="#"><img src="./img/user.jpg" class="user-pic"></a>
                 </div>
             </div>
 
             <div class="user-table">
                 <div class="inside-table">
                     <div class="userHeader">
-                        <h2>Danh Sách</h2>
+                        <h2>Danh Sách Đơn Hàng</h2>
                         <div class="search-box">
                             Từ ngày: <input type="date" id="start-date">
                             Đến ngày: <input type="date" id="end-date">
@@ -97,7 +91,7 @@
                                 <td>Tên Khách Hàng</td>
                                 <td>Tổng Đơn Hàng</td>
                                 <td>Ngày Đặt Hàng</td>
-                                <td>Địa Chỉ</td>
+                                <td>Quận<span class="unSort"><i class="fas fa-arrow-circle-up"></i></span></td>
                                 <td class="select-status">
                                     <select name="" id="deliver-status">
                                         <option value="Tình trạng">Tình trạng</option>
@@ -113,6 +107,19 @@
                         <tbody class="order-table">
                         </tbody>
                     </table>
+                </div>
+            </div>
+
+            <div class="sub-menu-wrap">
+                <div class="sub-menu">
+                    <div class="user-info">
+                        <img src="./img/user.jpg" alt="">
+                        <div>
+                            <h2>AdminSuper</h2>
+                        </div>
+                    </div>
+                    <hr>
+                    <p>Admin trang web CoolMate</p>
                 </div>
             </div>
         </div>

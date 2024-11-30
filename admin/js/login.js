@@ -1,8 +1,14 @@
-// Login
+// Login info
 const admin = {
-    user: 'adminSieuCute',
+    user: 'adminSuper',
     pass: '123456789'
 };
+
+// Check if isLoginned
+let isLogin = false;
+localStorage.setItem('isLogin', isLogin);
+
+// Show/hide password
 const form = document.getElementById('form');
 const user = document.getElementById('login-name');
 const user_icon = document.getElementById('user-icon');
@@ -20,39 +26,7 @@ showButton.onclick = (()=>{
     }
 });
 
-// form.addEventListener('submit', e =>{
-//     e.preventDefault();
-//     // validateInput();
-    
-//     setError(user.parentElement, 'Vui lòng nhập tên đăng nhập');
-// });
-
-// const setSuccess = element =>{
-//     const errorDisplay = document.querySelector('.invalid-message');
-//     errorDisplay.innerHTML = '';
-//     element.classList.remove('invalid');
-// }
-// const setError = (element, message) => {
-//     const errorDisplay = document.querySelector('.invalid-message');
-//     errorDisplay.innerHTML = message;
-//     element.classList.add('invalid');
-// }
-
-// const validateInput = ()=>{
-//     const userValue = user.value;
-//     const passValue = pass.value;
-//     if(userValue === ''){
-//         setError(user.parentElement, 'Vui lòng nhập mật khẩu');
-//     }else{
-//         setSuccess(user.parentElement);
-//     }
-//     if(passValue === ''){
-//         setError(pass.parentElement, 'Vui lòng nhập mật khẩu');
-//     }else{
-//         setSuccess(pass.parentElement);
-//     }
-// }
-
+// Login
 btn.addEventListener('click', formSubmit);
 function formSubmit(){
     if(user.value.length === 0){
@@ -95,9 +69,10 @@ function formSubmit(){
         pass.value='';
     }
     if(user.value === admin.user && pass.value === admin.pass){
-        window.location.href = "admin.html";
+        window.location.href = "index.html";
         user.value='';
         pass.value='';
+        isLogin = true;
+        localStorage.setItem('isLogin', isLogin);
     }
 }
-
